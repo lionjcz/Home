@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/drawable/base_bg.xml" value="0.1775" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/drawable/ic_app_logo_background.xml" value="0.132" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/drawable/ic_image.xml" value="0.132" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/activity_main.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/content_main.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/fragment_first.xml" value="0.16666666666666666" />
