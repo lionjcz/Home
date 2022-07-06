@@ -290,7 +290,7 @@ abstract class BaseActivity : AppCompatActivity() {
         imm?.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
-    fun showLoading(isShow: Boolean, canPressBack: Boolean, gif: String) {
+    fun showLoading(isShow: Boolean, canPressBack: Boolean, gif: Any) {
         val view = findViewById<View>(mainLoading)
         if (view != null) {
             val visibility = view.visibility
@@ -299,23 +299,44 @@ abstract class BaseActivity : AppCompatActivity() {
                     view.visibility = View.VISIBLE
                 }
                 Log.d("Develop_","gid:$gif")
-                if (gif!=""){
-                    view.findViewById<View>(R.id.main_default_progress).apply {
-                        this.visibility = View.INVISIBLE
+                when(gif){
+                    is String->{
+                        if (gif!="") {
+                            view.findViewById<View>(R.id.main_default_progress).apply {
+                                this.visibility = View.INVISIBLE
+                            }
+                            view.findViewById<ImageView>(R.id.main_custom_loading).apply {
+                                this.visibility = View.VISIBLE
+                                Glide.with(this).load(gif).into(this)
+                            }
+                        }else{
+                            view.findViewById<View>(R.id.main_default_progress).apply {
+                                this.visibility = View.VISIBLE
+                            }
+                            view.findViewById<ImageView>(R.id.main_custom_loading).apply {
+                                this.visibility = View.INVISIBLE
+                            }
+                        }
                     }
-                    view.findViewById<ImageView>(R.id.main_custom_loading).apply {
-                        this.visibility = View.VISIBLE
-                        Glide.with(this).load(gif).into(this)
+                    is Int->{
+                        view.findViewById<View>(R.id.main_default_progress).apply {
+                            this.visibility = View.INVISIBLE
+                        }
+                        view.findViewById<ImageView>(R.id.main_custom_loading).apply {
+                            this.visibility = View.VISIBLE
+                            Glide.with(this).load(gif).into(this)
+                        }
                     }
-                }else{
-                    view.findViewById<View>(R.id.main_default_progress).apply {
-                        this.visibility = View.VISIBLE
+                    else->{
+                        view.findViewById<View>(R.id.main_default_progress).apply {
+                            this.visibility = View.VISIBLE
+                        }
+                        view.findViewById<ImageView>(R.id.main_custom_loading).apply {
+                            this.visibility = View.INVISIBLE
+                        }
                     }
-                    view.findViewById<ImageView>(R.id.main_custom_loading).apply {
-                        this.visibility = View.INVISIBLE
-                    }
-
                 }
+
                 mCanPressBack = canPressBack
             }
             else {

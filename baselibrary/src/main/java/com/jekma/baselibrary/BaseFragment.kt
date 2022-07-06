@@ -394,7 +394,7 @@ abstract class BaseFragment : Fragment(), Base.IOnBackPressed {
         }
     }
 
-    open fun showLoading(isShow: Boolean, canPressBack: Boolean = true,gif:String = "") {
+    open fun showLoading(isShow: Boolean, canPressBack: Boolean = true,gif:Any="") {
         try {
             if (activity != null && activity is BaseActivity) {
                 (activity as BaseActivity?)!!.showLoading(isShow, canPressBack,gif)
