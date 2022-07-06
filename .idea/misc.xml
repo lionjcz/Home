@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/activity_main.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/content_main.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/fragment_first.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/fragment_second.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/drawable/base_bg.xml" value="0.194" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/drawable/bottom_nav_icon_color_selector.xml" value="0.132" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/layout/ac.xml" value="0.30885416666666665" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/layout/activity_base.xml" value="0.12239583333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

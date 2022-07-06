@@ -1,44 +1,23 @@
 package com.jekma.home
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.jekma.home.databinding.FragmentFirstBinding
+import com.jekma.baselibrary.BaseFragment
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
-class FirstFragment : Fragment() {
+class FirstFragment : BaseFragment() {
 
-    private var _binding: FragmentFirstBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
-
+    companion object {
+        fun newInstance() = FirstFragment()
     }
+
+    override val titleResId: Int
+        get() = R.string.title_first
+    override val layoutResId: Int
+        get() = R.layout.fragment_first
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
+        showLoading(true, gif = "https://media1.giphy.com/media/YeH7jDG54fHWw/giphy.gif?cid=ecf05e47f8jr6wcbbibygu7mie28clxkzjhbkmvu2etyhbn3&rid=giphy.gif&ct=g")
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
