@@ -1,6 +1,5 @@
 package com.jekma.home
 
-import android.os.Bundle
 import com.jekma.baselibrary.BaseActivity
 
 class MainActivity : BaseActivity() {
