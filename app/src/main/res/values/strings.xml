@@ -9,5 +9,14 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_first">第一個Fragment</string>
+    <string name="title_first">Fragment One</string>
+    <string name="menu_job_thermaltake_gamingdesk_desk">Desk</string>
+    <string name="menu_job_thermaltake_gamingdesk_record">Record</string>
+    <string name="menu_job_thermaltake_gamingdesk_rgb">Rgb</string>
+    <string name="menu_job_thermaltake_gamingdesk_settings">Settings</string>
+    <string-array name="projects">
+        <item>Maxe</item>
+        <item>ListryTech</item>
+        <item>FutureLab</item>
+    </string-array>
 </resources>

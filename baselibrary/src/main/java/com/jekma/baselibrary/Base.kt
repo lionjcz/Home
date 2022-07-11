@@ -17,7 +17,7 @@ class Base {
     class Exception(private val mError: Error) : java.lang.Exception(mError.message) {
         private val mExtCode: Int = Error.Unknown.value
         val code: Int get() = mError.value
-        override val message: String get() = "Exception: " + mError.value
+        override val message: String get() = "Exception: " + mError.message
         fun isEqual(e: Error): Boolean {
             return e.value == mError.value
         }
