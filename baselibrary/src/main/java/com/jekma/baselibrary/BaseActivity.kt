@@ -7,6 +7,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toolbar
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -40,6 +41,7 @@ abstract class BaseActivity : AppCompatActivity() {
     protected val containerId: Int
         get() = R.id.main_container
 
+<<<<<<< HEAD
     private val mainLoading: Int
         get() = R.id.main_loading
 
@@ -180,6 +182,34 @@ abstract class BaseActivity : AppCompatActivity() {
 
     enum class Structure {
         NAV_GRAPH, GENERAL_FRAGMENT
+=======
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
+    }
+
+    private fun setNavigation(isUse: Boolean) {
+        try {
+
+            if (isUse){
+                val navController = findNavController(R.id.main_nav_host_fragment)
+                val inflater = navController.navInflater
+                val graph = inflater.inflate(defaultNavGraph)
+                navController.graph = graph
+                appBarConfiguration = AppBarConfiguration(navController.graph)
+                setupActionBarWithNavController(navController, appBarConfiguration)
+            }
+        }catch (e:Exception){
+            Log.e("Develop_","${e.message}")
+        }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.main_nav_host_fragment)
+        return navController.navigateUp(appBarConfiguration)
+                || super.onSupportNavigateUp()
+>>>>>>> i1
     }
 
     /**
@@ -352,6 +382,7 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+<<<<<<< HEAD
     /**
      * Navigation架構專用
      */
@@ -460,4 +491,9 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
 
+=======
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
+>>>>>>> i1
 }

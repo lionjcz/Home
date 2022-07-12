@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_app"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.jekma.home.HomeFragment"
+        android:label="@string/home_title"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/ProjectsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProjectsFragment"
+        android:name="com.jekma.home.ProjectsFragment"
+        android:label="@string/title_projects"
+        tools:layout="@layout/fragment_projects">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_ProjectsFragment_to_projectsNavContainerFragment"
+            app:destination="@id/projectsNavContainerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectsNavContainerFragment"
+        android:name="com.jekma.home.ProjectsNavContainerFragment"
+        android:label="fragment_projects_nav_container"
+        tools:layout="@layout/fragment_projects_nav_container" />
+</navigation>

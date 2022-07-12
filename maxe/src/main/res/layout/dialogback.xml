@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<!--    <TextView-->
+<!--        android:id="@+id/back_titl"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="32dp"-->
+
+<!--        android:textColor="@color/deepskyblue"-->
+<!--        android:text="請確認您的選擇"-->
+<!--        >-->
+<!--    </TextView>-->
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:src="@color/black"-->
+
+<!--        android:layout_height="2dp">-->
+
+<!--    </androidx.appcompat.widget.AppCompatImageView>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="32dp"
+        android:text="是否登出?"
+        >
+    </TextView>
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:src="@color/black"-->
+
+<!--        android:layout_height="2dp">-->
+
+<!--    </androidx.appcompat.widget.AppCompatImageView>-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+<!--        <Button-->
+<!--            android:id="@+id/back_cencel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:text="取消" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/back_confirm"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:text="確認" />-->
+    </LinearLayout>
+
+</LinearLayout>
