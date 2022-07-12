@@ -43,6 +43,7 @@ class ProjectsFragment : BaseFragment() {
         _binding = null
     }
 
+
     private fun setProjectName(stringArray: Array<String>) {
         for (i in stringArray.indices) {
             val ll = binding.llProjects[i] as LinearLayout
