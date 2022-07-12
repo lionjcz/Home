@@ -1,4 +1,4 @@
-package com.company.maxe.Tools.HRFinalContent
+package com.jekma.maxe.Tools.HRFinalContent
 
 import android.net.Uri
 import android.os.Bundle

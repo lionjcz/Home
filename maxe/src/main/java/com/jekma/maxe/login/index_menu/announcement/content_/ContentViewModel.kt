@@ -1,24 +1,42 @@
-package com.jekma.maxe.login.index_menu.announcement.Content
+package com.jekma.maxe.login.index_menu.announcement.content_
 
-import androidx.lifecycle.ViewModel
-//import com.company.maxe.Tools.URL.VolleyBridge
-//import com.kymjs.rxvolley.RxVolley
-//import com.kymjs.rxvolley.client.HttpCallback
-//import com.kymjs.rxvolley.client.HttpParams
+import android.app.Application
+import android.os.Build
+import androidx.annotation.RequiresApi
+import androidx.lifecycle.MutableLiveData
+import com.jekma.baselibrary.BaseViewModel
 
-class ContentviewModel: ViewModel() {
-//
-//    private val Result = MutableLiveData<String>()
+@RequiresApi(Build.VERSION_CODES.Q)
+class ContentViewModel(application: Application) : BaseViewModel(application) {
+
+    private val Result = MutableLiveData<String>()
+
+    fun callInfo(index: Int, announcements: String) {
+        RxVolleyConnext(Result,index)
+        mActionListener?.HttpCallback("Response",index = index)
+    }
+
+    private var mActionListener: OnActionListener? = null
+
+    interface OnActionListener{
+        fun HttpCallback(response: String, index: Int)
+    }
+
+    fun setActionListener(listener:OnActionListener){
+        mActionListener = listener
+    }
+
+
 //    private val TAG:String = "ContentviewModel"
 //    fun callInfo(index: Int,Url:String): LiveData<String> {
 //        RxVolleyConnext(Result,index)
 //        return Result
 //    }
-//    private fun RxVolleyConnext(Result: MutableLiveData<String>, index: Int) {
-//
-//        /**
-//         * 設定Api網址
-//         */
+    private fun RxVolleyConnext(Result: MutableLiveData<String>, index: Int) {
+
+        /**
+         * 設定Api網址
+         */
 //        val url = VolleyBridge().Announcements()
 //
 //
@@ -50,6 +68,7 @@ class ContentviewModel: ViewModel() {
 //        }
 //
 //
+//
 //        /**
 //         * 連線到Api
 //         */
@@ -63,6 +82,6 @@ class ContentviewModel: ViewModel() {
 //                .callback(callBack)
 //                .encoding("UTF-8") //default
 //                .doTask()
-//    }
+    }
 
 }

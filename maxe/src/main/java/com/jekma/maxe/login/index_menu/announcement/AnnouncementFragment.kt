@@ -59,6 +59,10 @@ class AnnouncementFragment : BaseBindingFragment<MaxeFragmentAnnounceBinding,Ann
                     Toast.makeText(requireContext(), "發生異常，請聯絡 2901-5588 分機 2213", Toast.LENGTH_LONG).show()
                 }
             }
+
+            override fun onClick(bundle: Bundle) {
+                gotoNextNavPage(R.id.action_nav_announcement_to_nav_content_announcefinal,bundle)
+            }
         })
         mViewModel.create()
         mViewBinding.vm = mViewModel

@@ -1,8 +1,6 @@
 package com.jekma.home
 
-import android.media.Image
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -10,7 +8,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.get
 import com.bumptech.glide.Glide
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jekma.baselibrary.BaseFragment
 import com.jekma.home.databinding.FragmentFirstBinding
 
@@ -46,12 +43,12 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setBackground(container: View) {
-        container.background = resources.getDrawable(R.drawable.ic_dialog_email,null)
+        container.background = resources.getDrawable(R.drawable.ic_dialog_email, null)
         container.background.alpha = 80
     }
 
     private fun setProjectName(stringArray: Array<String>) {
-        for (i in stringArray.indices){
+        for (i in stringArray.indices) {
             val ll = binding.llProjects[i] as LinearLayout
             val ImageView = ll[0] as ImageView
             setBackground(ImageView)

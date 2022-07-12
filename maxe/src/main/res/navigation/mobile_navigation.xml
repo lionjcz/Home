@@ -112,7 +112,7 @@
 <!--    01公告=>公告內容-->
 <fragment
         android:id="@+id/nav_content_announcefinal"
-        android:name="com.jekma.maxe.login.index_menu.announcement.Content.Content"
+        android:name="com.jekma.maxe.login.index_menu.announcement.content_.Content"
         android:label="string/Label_AnnouncementFinal"
         tools:layout="@layout/content_announcefinal" />
 
@@ -225,7 +225,7 @@
     </fragment>
     <fragment
         android:id="@+id/content2"
-        android:name="com.company.maxe.Tools.HRFinalContent.Content"
+        android:name="com.jekma.maxe.Tools.HRFinalContent.Content"
         android:label="檔案內容"
         tools:layout="@layout/newemployeerfinal" />
     <fragment

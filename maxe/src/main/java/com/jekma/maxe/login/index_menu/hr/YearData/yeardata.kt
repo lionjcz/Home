@@ -1,21 +1,11 @@
 package com.company.maxe.Login.index_menu.hr.YearData
 
-import android.content.Context
-import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import com.jekma.maxe.R
-import com.company.maxe.Tools.HRFinalContent.Content
-import java.io.UnsupportedEncodingException
-import java.net.URLEncoder
-import java.util.ArrayList
 
 class yeardata : Fragment()
 //    , View.OnClickListener, OnTouchListener

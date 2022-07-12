@@ -4,7 +4,7 @@ package com.jekma.maxe.login.index_menu.documents_laws.Documents
 import com.jekma.maxe.R
 import com.jekma.baselibrary.BaseFragment
 
-//import com.company.maxe.Tools.HRFinalContent.Content;
+//import com.jekma.maxe.Tools.HRFinalContent.Content;
 //import com.company.maxe.Tools.URL.VolleyBridge;
 class Documents : BaseFragment()
 //    Fragment(), View.OnClickListener, OnTouchListener

@@ -265,7 +265,7 @@ abstract class BaseFragment : Fragment(), Base.IOnBackPressed {
     }
 
     protected fun gotoNextNavPage(resId: Int, bundle: Bundle?) {
-        findNavController().navigate(resId)
+        findNavController().navigate(resId,bundle)
     }
 
     open fun showLoading(isShow: Boolean, canPressBack: Boolean = true, gif: Any = "") {

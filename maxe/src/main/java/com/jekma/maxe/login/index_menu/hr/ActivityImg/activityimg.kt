@@ -310,8 +310,8 @@ class activityimg : Fragment()
 //    }
 //
 //    private fun nextFragment(parsedFilename: String) {
-//        val values: com.company.maxe.Tools.HRFinalContent.Content =
-//            com.company.maxe.Tools.HRFinalContent.Content()
+//        val values: com.jekma.maxe.Tools.HRFinalContent.Content =
+//            com.jekma.maxe.Tools.HRFinalContent.Content()
 //        val bundle = Bundle()
 //        bundle.putString("index", parsedFilename)
 //        values.setArguments(bundle)
