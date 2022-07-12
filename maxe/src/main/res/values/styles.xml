@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- Base application theme end. -->
+
+
+
+
+
+
+    <!--    login-->
+    <!--    login-->
+    <!--    login-->
+    <!--    login-->
+
+    <!--    Accent color-->
+    <style name="AppThemeInputLayout" parent="AppTheme">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <!--    outline color and inside text hint color  -->
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox1" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#fff</item>
+        <item name="android:textColorHint">#fff</item>
+    </style>
+
+    <style name="CounterText" parent="TextAppearance.Design.Counter">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--    text hint color of outline-->
+    <style name="hintText" parent="android:TextAppearance">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textColor">#fff</item>
+        <item name="boxStrokeColor">#fff</item>
+
+    </style>
+
+<!--    OverFlowColor-->
+    <style name="OverFlowColor" parent="TextAppearance.Design.Counter">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <!--    login-->
+    <!--    login-->
+    <!--    login-->
+    <!--    login-->
+
+
+</resources>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<layout>
+    <data class="FragmentFirstBinding">
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,6 +19,7 @@
         android:weightSum="3"
         android:orientation="horizontal">
         <LinearLayout
+            android:id="@+id/projects"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -23,18 +28,21 @@
                 android:id="@+id/iv1234"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:src="@drawable/progress"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical|center_horizontal"
-                tools:text="Maxe"
+                android:text="@string/home_item_projects"
+                android:textColor="@color/black"
                 />
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:visibility="invisible"
             android:orientation="vertical">
             <ImageView
                 android:layout_width="match_parent"
@@ -51,6 +59,7 @@
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="match_parent"
+            android:visibility="invisible"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
@@ -70,3 +79,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

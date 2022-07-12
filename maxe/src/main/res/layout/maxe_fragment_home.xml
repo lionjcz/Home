@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="MaxeFragmentHomeBinding">
+
+    </data>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/wheat"
+        android:orientation="vertical"
+        tools:context="com.jekma.maxe.login.index_menu.home.HomeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                tools:ignore="DisableBaselineAlignment">
+                <!--1-1-->
+                <LinearLayout
+                    android:id="@+id/announcement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:orientation="vertical"
+                    android:tag="@string/maxe_home_item_announcement">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/announcements"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/btn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/maxe_home_item_announcement"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                </LinearLayout>
+                <!--1-2-->
+                <LinearLayout
+                    android:id="@+id/sales"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:orientation="vertical"
+                    android:tag="@string/maxe_home_item_announcement">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/sales"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/btn2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/maxe_home_item_send"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                </LinearLayout>
+                <!--1-3-->
+                <LinearLayout
+                    android:id="@+id/services"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/repair"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/btn3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/maxe_home_item_share"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                tools:ignore="DisableBaselineAlignment">
+                <!--            2-1-->
+                <LinearLayout
+                    android:id="@+id/hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/hr"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/btn4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/maxe_home_item_slideshow"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                </LinearLayout>
+                <!--            2-2-->
+                <LinearLayout
+                    android:id="@+id/document_law"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/documents_law"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/btn5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/maxe_home_item_tools"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                </LinearLayout>
+
+                <!--           2-3 empty-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/documents_law"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/btnTest"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

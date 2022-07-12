@@ -3,25 +3,59 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/T925-Work/Android/Home/app/src/main/res/drawable/a.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/app/src/main/res/drawable/ic_app_logo_background.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/app/src/main/res/layout/fragment_first.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/app/src/main/res/layout/fragment_projects.xml" value="0.22" />
+        <entry key="..\:/T925-Work/Android/Home/app/src/main/res/layout/fragment_projects_nav_container.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/baselibrary/src/main/res/layout/activity_base.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/baselibrary/src/main/res/layout/content_main.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/drawable-v21/button_bg_enabled.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/drawable/awdawdawawda.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/drawable/customerborder.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/activity_errorcode_home.xml" value="0.31354166666666666" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/activity_login.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/activity_main.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/activity_welcome.xml" value="0.5317028985507246" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/announcement.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/content_announcefinal.xml" value="0.31354166666666666" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/content_main.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_displayimageactivity.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_displayimagefragment.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_gallery.xml" value="0.3023255813953488" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_home.xml" value="0.31354166666666666" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_home_.xml" value="0.22" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_send.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_share.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_slideshow.xml" value="0.31354166666666666" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_tools.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/fragment_welcome.xml" value="0.31354166666666666" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/maxe_fragment_announce.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/maxe_fragment_home.xml" value="0.3333333333333333" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/layout/nav_header_main.xml" value="0.16847826086956522" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/menu/activity_main_drawer.xml" value="0.31354166666666666" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/mipmap-anydpi-v26/announcements.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/mipmap-anydpi-v26/documents_law.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/mipmap-anydpi-v26/hr.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/mipmap-anydpi-v26/repair.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/mipmap-anydpi-v26/sales.xml" value="0.1905" />
+        <entry key="..\:/T925-Work/Android/Home/maxe/src/main/res/mipmap-anydpi-v26/sales_round.xml" value="0.1905" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/drawable/base_bg.xml" value="0.1775" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/drawable/ic_app_logo_background.xml" value="0.132" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/drawable/ic_image.xml" value="0.132" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/activity_main.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/content_main.xml" value="0.20208333333333334" />
-        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/fragment_first.xml" value="0.5" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/fragment_first.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/layout/fragment_second.xml" value="0.20208333333333334" />
-        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/menu/job_thermaltake_gamingdesk.xml" value="0.371875" />
-        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/app/src/main/res/menu/menu_main.xml" value="0.25104166666666666" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/drawable/base_bg.xml" value="0.194" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/drawable/bottom_nav_icon_color_selector.xml" value="0.132" />
         <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/layout/ac.xml" value="0.30885416666666665" />
-        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/layout/activity_base.xml" value="0.22" />
-        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/layout/content_main.xml" value="0.175" />
-        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/menu/menu_main.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/fsc19/AndroidStudioProjects/Home/baselibrary/src/main/res/layout/activity_base.xml" value="0.12239583333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

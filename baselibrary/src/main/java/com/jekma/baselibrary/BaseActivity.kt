@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toolbar
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -28,21 +29,30 @@ abstract class BaseActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         setNavigation(defaultNavGraph!=0)
 
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
     }
 
     private fun setNavigation(isUse: Boolean) {
-        if (isUse){
-            val navController = findNavController(R.id.nav_host_fragment_content_main)
-            val inflater = navController.navInflater
-            val graph = inflater.inflate(defaultNavGraph)
-            navController.graph = graph
-            appBarConfiguration = AppBarConfiguration(navController.graph)
-            setupActionBarWithNavController(navController, appBarConfiguration)
+        try {
+
+            if (isUse){
+                val navController = findNavController(R.id.main_nav_host_fragment)
+                val inflater = navController.navInflater
+                val graph = inflater.inflate(defaultNavGraph)
+                navController.graph = graph
+                appBarConfiguration = AppBarConfiguration(navController.graph)
+                setupActionBarWithNavController(navController, appBarConfiguration)
+            }
+        }catch (e:Exception){
+            Log.e("Develop_","${e.message}")
         }
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        val navController = findNavController(R.id.main_nav_host_fragment)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
@@ -112,5 +122,9 @@ abstract class BaseActivity : AppCompatActivity() {
 //            val id = resources.getResourceEntryName(mainLoading)
 //            throw NullPointerException("No get main activity loading view id: '$id'!")
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 }

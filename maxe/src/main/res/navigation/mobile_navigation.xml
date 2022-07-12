@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+<!--    首頁-->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.jekma.maxe.login.index_menu.home.HomeFragment"
+        android:label="string/menu_home"
+        tools:layout="@layout/maxe_fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_announcement"
+            app:destination="@id/nav_announcement" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_send2"
+            app:destination="@id/nav_send" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_share"
+            app:destination="@id/nav_share" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_tools2"
+            app:destination="@id/nav_tools" />
+    </fragment>
+<!--    公告-->
+    <fragment
+        android:id="@+id/nav_announcement"
+        android:name="com.jekma.maxe.login.index_menu.announcement.AnnouncementFragment"
+        android:label="string/menu_announcement"
+        tools:layout="@layout/maxe_fragment_announce" >
+        <action
+            android:id="@+id/action_nav_announcement_to_nav_content_announcefinal"
+            app:destination="@id/nav_content_announcefinal" />
+    </fragment>
+<!--    人資專區-->
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.jekma.maxe.login.index_menu.hr.SlideshowFragment"
+        android:label="string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_introduce"
+            app:destination="@id/introduce" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_training"
+            app:destination="@id/training" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_newTraining"
+            app:destination="@id/newTraining" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_activityimg"
+            app:destination="@id/activityimg" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_yeardata"
+            app:destination="@id/yeardata" />
+    </fragment>
+<!--    規章表單-->
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.company.maxe.Login.index_menu.documents_laws.ToolsFragment"
+        android:label="string/menu_tools"
+        tools:layout="@layout/fragment_tools" >
+        <action
+            android:id="@+id/action_nav_tools_to_laws"
+            app:destination="@id/laws" />
+        <action
+            android:id="@+id/action_nav_tools_to_documents"
+            app:destination="@id/documents" />
+    </fragment>
+<!--    服務專區-->
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.company.maxe.Login.index_menu.services.ShareFragment"
+        android:label="string/menu_share"
+        tools:layout="@layout/fragment_share" >
+        <action
+            android:id="@+id/action_nav_share_to_ser_ErrCod"
+            app:destination="@id/ser_ErrCod" />
+        <action
+            android:id="@+id/action_nav_share_to_ser_stock"
+            app:destination="@id/ser_stock" />
+    </fragment>
+<!--    業務專區-->
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.company.maxe.Login.index_menu.sales.SendFragment"
+        android:label="string/menu_send"
+        tools:layout="@layout/fragment_send" >
+        <action
+            android:id="@+id/action_nav_send_to_customer"
+            app:destination="@id/customer" />
+        <action
+            android:id="@+id/action_nav_send_to_catalog"
+            app:destination="@id/catalog" />
+        <action
+            android:id="@+id/action_nav_send_to_textSerching"
+            app:destination="@id/textSerching" />
+        <action
+            android:id="@+id/action_nav_send_to_manager"
+            app:destination="@id/manager" />
+        <action
+            android:id="@+id/action_nav_send_to_Sales_CustomerBySerching"
+            app:destination="@id/Sales_CustomerBySerching" />
+    </fragment>
+
+
+<!--    01公告=>公告內容-->
+<fragment
+        android:id="@+id/nav_content_announcefinal"
+        android:name="com.jekma.maxe.login.index_menu.announcement.Content.Content"
+        android:label="string/Label_AnnouncementFinal"
+        tools:layout="@layout/content_announcefinal" />
+
+<!--    業務專區=>經銷商業績-->
+<fragment
+        android:id="@+id/customer"
+        android:name="com.company.maxe.Login.index_menu.sales.Button.Customer_ALL.Customer"
+        android:label="string/Label_customer"
+        tools:layout="@layout/customer" >
+        <action
+            android:id="@+id/action_customer_to_fragment_customer_sell"
+            app:destination="@id/fragment_customer_sell" />
+    </fragment>
+    <!--    業務專區=>經銷商業績=>業績內容-->
+        <fragment
+        android:id="@+id/fragment_customer_sell"
+        android:name="com.company.maxe.Login.index_menu.sales.Button.Customer_ALL.fragment_customer_sell"
+        android:label="string/Label_fragment_customer_sell"
+        tools:layout="@layout/fragment_customer_sell" />
+    <!--    業務專區=>型錄搜尋-->
+        <fragment
+        android:id="@+id/catalog"
+        android:name="com.company.maxe.Login.index_menu.sales.Button.StockCatalogSerching.Catalog"
+        android:label="string/Label_catalog"
+        tools:layout="@layout/catalog" />
+    <!--    業務專區=>型號搜尋-->
+        <fragment
+            android:id="@+id/textSerching"
+            android:name="com.company.maxe.Login.index_menu.sales.Button.StockTextSerching.TextSerching"
+            android:label="string/Label_textSerching"
+            tools:layout="@layout/textserching" />
+    <!--    業務專區=>主管專區-->
+        <fragment
+            android:id="@+id/manager"
+            android:name="com.company.maxe.Login.index_menu.sales.Manager.Manager"
+            android:label="string/Label_manager"
+            tools:layout="@layout/manager" />
+
+<!--    服務專區=>錯誤代碼-->
+    <fragment
+        android:id="@+id/ser_ErrCod"
+        android:name="com.company.maxe.Login.index_menu.services.Button.Ser_ErrCod"
+        android:label="string/Label_ser_ErrCod"
+        tools:layout="@layout/fragment_ser_errcod" />
+<!--    服務專區=>查詢料號庫存-->
+    <fragment
+        android:id="@+id/ser_stock"
+        android:name="com.company.maxe.Login.index_menu.services.Button.Ser_stock"
+        android:label="string/Label_ser_stock"
+        tools:layout="@layout/fragment_ser_stock" />
+
+
+<!--    人資專區=>新人介紹-->
+    <fragment
+        android:id="@+id/introduce"
+        android:name="com.company.maxe.Login.index_menu.hr.Introduce.Introduce"
+        android:label="string/Label_introduce"
+        tools:layout="@layout/introduce" >
+        <action
+            android:id="@+id/action_introduce_to_content4"
+            app:destination="@id/content4" />
+    </fragment>
+<!--    人資專區=>新人訓練-->
+    <fragment
+        android:id="@+id/newTraining"
+        android:name="com.company.maxe.Login.index_menu.hr.NewTraining.NewTraining"
+        android:label="string/Label_newTraining"
+        tools:layout="@layout/newtraining" >
+        <action
+            android:id="@+id/action_newTraining_to_content4"
+            app:destination="@id/content4" />
+    </fragment>
+<!--    人資專區=>在職訓練-->
+    <fragment
+        android:id="@+id/training"
+        android:name="com.company.maxe.Login.index_menu.hr.Training.Training"
+        android:label="string/Label_training"
+        tools:layout="@layout/training" >
+        <action
+            android:id="@+id/action_training_to_content4"
+            app:destination="@id/content4" />
+    </fragment>
+<!--    人資專區=>活動照片-->
+
+
+
+
+
+
+<!--    規章表單=>規章-->
+    <fragment
+        android:id="@+id/laws"
+        android:name="com.company.maxe.Login.index_menu.documents_laws.Laws.Laws"
+        android:label="string/Label_laws"
+        tools:layout="@layout/laws_fragment" >
+        <action
+            android:id="@+id/action_laws_to_content4"
+            app:destination="@id/content4" />
+    </fragment>
+<!--    規章表單=>表單-->
+
+    <fragment
+        android:id="@+id/documents"
+        android:name="com.jekma.maxe.login.index_menu.documents_laws.Documents.Documents"
+        android:label="string/Label_documents"
+        tools:layout="@layout/documents_fragment" >
+        <action
+            android:id="@+id/action_documents_to_content2"
+            app:destination="@id/content2" />
+    </fragment>
+    <fragment
+        android:id="@+id/content2"
+        android:name="com.company.maxe.Tools.HRFinalContent.Content"
+        android:label="檔案內容"
+        tools:layout="@layout/newemployeerfinal" />
+    <fragment
+        android:id="@+id/content4"
+        android:name="com.company.maxe.Tools.HRFinalContent.Content_BlockDownload"
+        android:label="內容"
+        tools:layout="@layout/content_training" />
+
+
+
+<!--    Sales menu CustomerBySerching-->
+    <fragment
+        android:id="@+id/Sales_CustomerBySerching"
+        android:name="com.company.maxe.Login.index_menu.sales.Button.Customer_Serching.CustomerBySerching"
+        android:label="查詢經銷商"
+        tools:layout="@layout/fragment_customer_by_serching"
+        >
+        <action
+            android:id="@+id/action_Sales_CustomerBySerching_to_fragment_customer_sell"
+            app:destination="@id/fragment_customer_sell" />
+    </fragment>
+<!--    Sales menu CustomerBySerching-->
+
+<!--    Sales menu BySerchingResult-->
+    <fragment
+        android:id="@+id/Sales_BySerchingResult"
+        android:name="com.company.maxe.Login.index_menu.sales.Button.Customer_Serching.BySerchingResult"
+        android:label="經銷商業績"
+        tools:layout="@layout/fragment_byserchingresult"
+        />
+    <fragment
+        android:id="@+id/activityimg"
+        android:name="com.company.maxe.Login.index_menu.hr.ActivityImg.activityimg"
+        android:label="string/HR_ActivityImgs"
+        tools:layout="@layout/activityimg_fragment">
+        <action
+            android:id="@+id/action_activityimg_to_displayimagefragment"
+            app:destination="@id/displayimagefragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yeardata"
+        android:name="com.company.maxe.Login.index_menu.hr.YearData.yeardata"
+        android:label="string/HR_YearData"
+        tools:layout="@layout/yeardata_fragment">
+        <action
+            android:id="@+id/action_yeardata_to_content2"
+            app:destination="@id/content2" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayimagefragment"
+        android:name="com.company.maxe.Login.index_menu.hr.ActivityImg.DisplayImageFragment.displayimagefragment"
+        android:label="fragment_displayimagefragment"
+        tools:layout="@layout/fragment_displayimagefragment" />
+    <!--    Sales menu BySerchingResult-->
+
+
+
+
+</navigation>

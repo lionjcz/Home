@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "5361208520",
+    "project_id": "maxe-app",
+    "storage_bucket": "maxe-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5361208520:android:7453a129f23bede6c7a9fd",
+        "android_client_info": {
+          "package_name": "com.black.maxe.release"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5361208520-qcrbut7f4jaklu843bd2c6p8onbm9l25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_Tg0J1MKA0r2BQM8HJ4kh9vGBoSt2-_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5361208520-qcrbut7f4jaklu843bd2c6p8onbm9l25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

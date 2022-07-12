@@ -28,9 +28,6 @@ class HomeFragment : BaseFragment() {
     }
 
 
-    override val isShowMainBar: Boolean
-        get() = true
-
     override val setFabListener: (View) -> Unit
         get() = fun(view: View) {
             Toast.makeText(requireContext(), "我在FGMT接收了事件觸發", Toast.LENGTH_LONG).show()
@@ -45,7 +42,7 @@ class HomeFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setBackground(view)
         setProjectName(resources.getStringArray(R.array.projects))
-
+        listener()
     }
 
     private fun setBackground(container: View) {
@@ -58,9 +55,8 @@ class HomeFragment : BaseFragment() {
             val ll = binding.llProjects[i] as LinearLayout
             val ImageView = ll[0] as ImageView
             setBackground(ImageView)
-
-            val textView = ll[1] as TextView
-            textView.text = stringArray[i]
+//            val textView = ll[1] as TextView
+//            textView.text = stringArray[i]
         }
 
     }
@@ -70,19 +66,22 @@ class HomeFragment : BaseFragment() {
         return textView
     }
 
-    private fun listener(view:View,bottomResId: Int) {
-        view.findViewById<BottomNavigationView>(bottomResId).setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.menu_job_thermaltake_gamingdesk_desktop -> {
-                    Toast.makeText(requireContext(), "底部選單按下了desk", Toast.LENGTH_LONG).show()
-                    gotoNextNavPage(R.id.action_FirstFragment_to_SecondFragment, null)
-                    true
-                }
-                else -> {
-                    false
-                }
-            }
+    private fun listener() {
+        binding.projects.setOnClickListener {
+            gotoNextNavPage(R.id.action_FirstFragment_to_SecondFragment, null)
         }
+//        binding.projects.findViewById<BottomNavigationView>(bottomResId).setOnItemSelectedListener { item ->
+//            when (item.itemId) {
+//                R.id.menu_job_thermaltake_gamingdesk_desktop -> {
+//                    Toast.makeText(requireContext(), "底部選單按下了desk", Toast.LENGTH_LONG).show()
+//                    gotoNextNavPage(R.id.action_FirstFragment_to_SecondFragment, null)
+//                    true
+//                }
+//                else -> {
+//                    false
+//                }
+//            }
+//        }
     }
 
     private fun setBackground(imageview: ImageView) {
