@@ -9,7 +9,6 @@ android {
     defaultConfig {
         minSdk 26
         targetSdk 32
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -27,12 +26,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-<<<<<<< HEAD
-=======
     buildFeatures {
         dataBinding true
     }
->>>>>>> i1
 }
 
 dependencies {

@@ -1,103 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <!-- 一般的-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/generalContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:visibility="gone">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/generalMainBar"
-                style="@style/ToolBarMainTheme"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/generalMainBarTitle"
-                    style="@style/ToolBarMainTheme.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    tools:text="Toolbar Title" />
-
-            </androidx.appcompat.widget.Toolbar>
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/main_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- 使用Navigation的-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/navContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/navContainer"
-            tools:visibility="visible">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/navMainBar"
-                style="@style/ToolBarMainTheme"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:background="@color/basePurple_700">
-
-                <TextView
-                    android:id="@+id/navMainBarTitle"
-                    style="@style/ToolBarMainTheme.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    tools:text="Toolbar Title" />
-
-            </androidx.appcompat.widget.Toolbar>
-
-            <fragment
-                android:id="@+id/nav_host_fragment"
-                android:name="androidx.navigation.fragment.NavHostFragment"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toBottomOf="@+id/navMainBar"
-                app:layout_constraintBottom_toTopOf="@id/navBottomBar"
-                app:defaultNavHost="true" />
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/navBottomBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
-                app:itemTextColor="@drawable/bottom_nav_icon_color_selector"
-                app:layout_constraintBottom_toBottomOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main_loading"
-        style="@style/ToolBarMainTheme.Loading"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        tools:visibility="visible">
-
-        <ProgressBar
-            android:id="@+id/main_default_progress"
-=======
 <layout>
     <data class="ActivityBaseBinding">
     </data>
@@ -107,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".BaseActivity">
-
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
@@ -137,7 +37,6 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
->>>>>>> i1
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
@@ -150,26 +49,6 @@
             style="@null"
             android:theme="@null"
             app:layout_constraintRight_toRightOf="parent"
-<<<<<<< HEAD
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-
-        <ImageView
-            android:id="@+id/main_custom_loading"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintRight_toRightOf="@+id/main_default_progress"
-            app:layout_constraintLeft_toLeftOf="@id/main_default_progress"
-            app:layout_constraintTop_toTopOf="@id/main_default_progress"
-            app:layout_constraintBottom_toBottomOf="@id/main_default_progress"
-            android:src="@color/basePurple_500"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.drawerlayout.widget.DrawerLayout>
-=======
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <include
@@ -215,96 +94,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </layout>
-    <!--<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent">-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:orientation="vertical">-->
-
-<!--        &lt;!&ndash; 一般的&ndash;&gt;-->
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:id="@+id/generalContainer"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            tools:visibility="gone">-->
-
-<!--            <androidx.appcompat.widget.Toolbar-->
-<!--                android:id="@+id/generalMainBar"-->
-<!--                style="@style/ToolBarMainTheme"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintRight_toRightOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/generalMainBarTitle"-->
-<!--                    style="@style/ToolBarMainTheme.Title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    tools:text="Toolbar Title" />-->
-
-<!--            </androidx.appcompat.widget.Toolbar>-->
-
-<!--            <androidx.fragment.app.FragmentContainerView-->
-<!--                android:id="@+id/main_container"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent" />-->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--        &lt;!&ndash; 使用Navigation的&ndash;&gt;-->
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:id="@+id/navContainer"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            style="@style/navContainer"-->
-<!--            tools:visibility="visible">-->
-
-<!--            <androidx.appcompat.widget.Toolbar-->
-<!--                android:id="@+id/navMainBar"-->
-<!--                style="@style/ToolBarMainTheme"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintRight_toRightOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                tools:background="@color/basePurple_700">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/navMainBarTitle"-->
-<!--                    style="@style/ToolBarMainTheme.Title"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    tools:text="Toolbar Title" />-->
-
-<!--            </androidx.appcompat.widget.Toolbar>-->
-
-<!--            <fragment-->
-<!--                android:id="@+id/nav_host_fragment"-->
-<!--                android:name="androidx.navigation.fragment.NavHostFragment"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="0dp"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/navMainBar"-->
-<!--                app:layout_constraintBottom_toTopOf="@id/navBottomBar"-->
-<!--                app:defaultNavHost="true" />-->
-
-<!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--                android:id="@+id/navBottomBar"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:itemIconTint="@drawable/bottom_nav_icon_color_selector"-->
-<!--                app:itemTextColor="@drawable/bottom_nav_icon_color_selector"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent" />-->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--    </LinearLayout>-->
-
-
-
-<!--</androidx.drawerlayout.widget.DrawerLayout>-->
->>>>>>> i1

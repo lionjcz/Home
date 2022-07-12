@@ -40,4 +40,7 @@
         <item name="android:background">@drawable/base_bg</item>
     </style>
 
+    <style name="Theme.Home.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Home.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
