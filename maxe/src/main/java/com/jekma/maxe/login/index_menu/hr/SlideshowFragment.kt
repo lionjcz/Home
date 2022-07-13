@@ -4,6 +4,7 @@ import com.jekma.baselibrary.BaseFragment
 import com.jekma.maxe.R
 
 class SlideshowFragment : BaseFragment() {
+
     //    var Training: LinearLayout? = null
 //    var NewTraining: LinearLayout? = null
 //    var Introduce: LinearLayout? = null
@@ -49,8 +50,10 @@ class SlideshowFragment : BaseFragment() {
 //            else             -> throw IllegalStateException("Unexpected value: " + v.id)
 //        }
 //    }
+    override val isShowMainBar: Boolean
+        get() = true
     override val titleResId: Int
-        get() = R.string.maxe_title_slideshow
+        get() = R.string.maxe_title_hr
     override val layoutResId: Int
         get() = R.layout.fragment_slideshow
 }

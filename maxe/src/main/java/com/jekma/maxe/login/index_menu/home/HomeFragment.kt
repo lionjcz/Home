@@ -11,7 +11,7 @@ import com.jekma.maxe.databinding.MaxeFragmentHomeBinding
 
 class HomeFragment : BaseFragment(), View.OnClickListener {
     override val isShowMainBar: Boolean get() = true
-    override val titleResId: Int get() = R.string.maxe_title_home
+    override val titleResId: Int get() = R.string.maxe_app_name
     override val layoutResId: Int get() = R.layout.maxe_fragment_home
 
     private var _binding: MaxeFragmentHomeBinding? = null

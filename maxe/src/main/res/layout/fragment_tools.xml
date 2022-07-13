@@ -43,7 +43,7 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:autoSizeMaxTextSize="20dp"
-                android:text="string/Documents_law_laws"
+                android:text="@string/maxe_documents_law_laws"
                 />
 
         </LinearLayout>
@@ -76,7 +76,7 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
-                android:text="string/Documents_law_documents"
+                android:text="@string/maxe_documents_law_documents"
                 />
 
         </LinearLayout>

@@ -1,25 +1,16 @@
 package com.jekma.maxe.login.index_menu.sales.Button.Customer_ALL
 
-import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.ListView
-import androidx.fragment.app.Fragment
 import com.jekma.baselibrary.BaseFragment
 //import androidx.navigation.NavController
 import com.jekma.maxe.R
 //import com.android.volley.AuthFailureError
 //import com.company.maxe.Login.MainActivity
-import java.util.ArrayList
-import java.util.HashMap
 
 class Customer : BaseFragment() {
     override val isShowMainBar: Boolean
         get() = true
     override val titleResId: Int
-        get() = R.string.Label_customer
+        get() = R.string.maxe_label_customer
     override val layoutResId: Int
         get() = R.layout.customer
 

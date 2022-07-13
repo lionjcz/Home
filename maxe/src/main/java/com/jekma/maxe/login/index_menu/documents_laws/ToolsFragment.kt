@@ -1,18 +1,26 @@
-package com.company.maxe.Login.index_menu.documents_laws
+package com.jekma.maxe.login.index_menu.documents_laws
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.jekma.baselibrary.BaseFragment
 //import androidx.navigation.NavController
 import com.jekma.maxe.R
 import java.lang.IllegalStateException
 
-class ToolsFragment : Fragment()
+class ToolsFragment : BaseFragment()
 //    , View.OnClickListener
 {
-//
+    override val isShowMainBar: Boolean
+        get() = true
+    override val titleResId: Int
+        get() = R.string.maxe_title_document_law
+    override val layoutResId: Int
+        get() = R.layout.fragment_tools
+
+    //
 //    //    FunctionBox
 //    private var view: View? = null
 //    var Laws: LinearLayout? = null
@@ -26,12 +34,12 @@ class ToolsFragment : Fragment()
 //        Documents.setOnClickListener(this)
 //    }
 //
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_tools, container, false)
-    }
+//    override fun onCreateView(
+//        inflater: LayoutInflater,
+//        container: ViewGroup?, savedInstanceState: Bundle?
+//    ): View? {
+//        return inflater.inflate(R.layout.fragment_tools, container, false)
+//    }
 //
 //    override fun onClick(v: View) {
 //        val navController: NavController = findNavController(view)

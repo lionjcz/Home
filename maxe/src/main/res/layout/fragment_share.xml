@@ -48,7 +48,7 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:autoSizeMaxTextSize="20dp"
-                android:text="string/services_errorcode"
+                android:text="@string/maxe_services_errorcode"
                 />
 
         </LinearLayout>
@@ -83,7 +83,7 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
-                android:text="string/services_goods"
+                android:text="@string/maxe_services_goods"
                 />
 
         </LinearLayout>
