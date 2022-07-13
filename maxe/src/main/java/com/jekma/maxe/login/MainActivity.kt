@@ -4,46 +4,120 @@ package com.company.maxe.Login
 //import com.company.maxe.R
 //import com.company.maxe.Tools.Device.Device
 //import com.company.maxe.Tools.Tool
+import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.company.maxe.Tools.Device.Device
+import com.company.maxe.Tools.Tool
 import com.jekma.baselibrary.BaseFragment
 import com.jekma.maxe.R
+import org.json.JSONArray
+import org.json.JSONException
+import org.json.JSONObject
 
 class MainActivity : BaseFragment() {
-    //
-//    private lateinit var Employeer: Array<String?>
-//    private lateinit var Sales: Array<String?>
-//    private val TAG = "MainActivity"
-//    private var NavigationTAG = ""
+
+    companion object{
+        val fakeData =
+            "[\n" + "{},\n" + "{\n" + "\"區別\":\"area\",\n" + "\"區域\":\"area2\"\n" + "},\n" + "{\n" + "\"總銷貨金額(月累積)\":88126643,\n" + "\"總銷貨金額(日)\":66438812\n" + "},\n" + "987654321\n" + "]"
+
+
+        private var NavigationTAG = ""
+
+        private lateinit var Employeer: Array<String?>
+        private lateinit var Sales: Array<String?>
+
+        fun PERSONAL(): Array<String?> {
+            return Employeer
+        }
+
+        //
+        fun sales(loginData: String?) {
+            NavigationTAG = "$NavigationTAG->sales()"
+            Sales = arrayOfNulls(4)
+            try {
+                val jsonArray = JSONArray(loginData)
+                Sales[0] = Tool(jsonArray.getJSONObject(1).optString("區域")).checkNull //area
+                Sales[1] = Tool(jsonArray.getJSONObject(1).optString("區別")).checkNull //district
+                Sales[2] = Tool(jsonArray.getJSONObject(2).optString("總銷貨金額(月累積)")).checkNull //month
+                Sales[3] = Tool(jsonArray.getJSONObject(2).optString("總銷貨金額(日)")).checkNull //day
+            } catch (e: JSONException) {
+                e.printStackTrace()
+            }
+        }
+        //
+        private fun Basical(loginData: String?) {
+            NavigationTAG = "$NavigationTAG->Basical()"
+            try {
+                Employeer = arrayOfNulls(14)
+                val jsonArray = JSONArray(loginData)
+                Employeer[0] = Tool(jsonArray.getJSONObject(0).optString("Android_NAME")).checkNull //name
+                Employeer[1] = Tool(jsonArray.getJSONObject(0).optString("Android_Email")).checkNull //email
+                Employeer[2] = Tool(jsonArray.getJSONObject(0).optString("部門")).checkNull
+                //section
+                Employeer[3] = Tool(jsonArray.getJSONObject(0).optString("職務類別")).checkNull
+                //unit
+                Employeer[4] = Tool(jsonArray.getJSONObject(0).optString("職位")).checkNull
+                //highestUnit
+                Employeer[5] = Tool(jsonArray.getJSONObject(0).optBoolean("Manager").toString()).checkNull
+                //Manager
+                Employeer[6] = Tool(jsonArray.getJSONObject(0).optString("萬士益(庫存)")).checkNull
+                //stockMaxe
+                Employeer[7] = Tool(jsonArray.getJSONObject(0).optString("副牌(庫存)")).checkNull
+                //stockElse
+                Employeer[8] = Tool(jsonArray.getJSONObject(0).optString("員工編號")).checkNull //WorkerNumber
+                Employeer[9] = Tool(jsonArray.getJSONObject(0).optString("查詢庫存")).checkNull //Permission(sales_stock)
+                Employeer[10] = Tool(jsonArray.getJSONObject(0).optString("查詢業績")).checkNull //Permission(sales_customer)
+                Employeer[11] = Tool(jsonArray.getJSONObject(0).optString("查詢料號庫存")).checkNull //Permission(services_stock)
+                Employeer[12] = Tool(jsonArray.getJSONObject(0).optString("查詢錯誤代碼")).checkNull //Permission(services_errorcode)
+                Employeer[13] = Tool(jsonArray.getJSONObject(0).optString("部_分公司")).checkNull //Permission(services_errorcode)
+            } catch (e: JSONException) {
+                e.printStackTrace()
+            }
+        }
+    }
+    fun SALES(loginData: String): Array<String?> {
+        Sales = arrayOfNulls(4)
+        val jsonArray = JSONArray(loginData)
+        Log.e("SAKED",jsonArray.getJSONObject(1).optString("區域"))
+        Sales[0] = Tool(jsonArray.getJSONObject(1).optString("區域")).checkNull //area
+        Sales[1] = Tool(jsonArray.getJSONObject(1).optString("區別")).checkNull //district
+        Sales[2] = Tool(jsonArray.getJSONObject(2).optString("總銷貨金額(月累積)")).checkNull //month
+        Sales[3] = Tool(jsonArray.getJSONObject(2).optString("總銷貨金額(日)")).checkNull //day
+        return Sales
+    }
+
+
+    private val TAG = "MainActivity"
 //    private var mAppBarConfiguration: AppBarConfiguration? = null
 //    private var toolbar: Toolbar? = null
 //    private lateinit var navigationView: NavigationView
 //    private var drawer: DrawerLayout? = null
 //    var Destination: String? = null
-//    fun PERSONAL(): Array<String?> {
-//        return Employeer
-//    }
+
 //
-//    fun SALES(): Array<String?> {
-//        return Sales
-//    }
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//        run {
-//            NavigationTAG = TAG
-//            Log.wtf(NavigationTAG, "onCreate")
-//            ReceiveDataFromLoginActivity()
+
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        run {
+            NavigationTAG = TAG
+            Log.d(NavigationTAG, "onCreate")
+            ReceiveDataFromLoginActivity()
 //            val User = Device(this, Employeer[8])
-//        }
-//        /*
-//        * default system code
-//        * */
+        }
+        /*
+        * default system code
+        * */
 //        system_code()
 //
 //        //header Data
 //        headerData(navigationView)
 //        ForDebug()
-//    }
+    }
 //
 //    private fun system_code() {
 //        run {
@@ -97,65 +171,22 @@ class MainActivity : BaseFragment() {
 //        return super.onKeyDown(keyCode, event)
 //    }
 //
-//    /*
-//    * Reveice data from LoginActivity
-//    * */
-//    private fun ReceiveDataFromLoginActivity() {
-//        NavigationTAG = "$NavigationTAG->ReceiveDataFromLoginActivity()"
+    /*
+    * Reveice data from LoginActivity
+    * */
+    private fun ReceiveDataFromLoginActivity() {
+
+    NavigationTAG = "$NavigationTAG->ReceiveDataFromLoginActivity()"
 //        val bundle = intent.extras
 //        if (bundle != null) {
 //            val LoginData = bundle.getString("LoginData") //姓名
 //            Log.wtf(NavigationTAG, "" + LoginData)
 //            Basical(LoginData)
-//            sales(LoginData)
+//            sales(fakeData)
 //        } else {
 //            Log.wtf(TAG, "Bundle is empty")
 //        }
-//    }
-//
-//    private fun sales(loginData: String?) {
-//        NavigationTAG = "$NavigationTAG->sales()"
-//        Sales = arrayOfNulls(4)
-//        try {
-//            val jsonArray = JSONArray(loginData)
-//            Sales[0] = Tool(jsonArray.getJSONObject(1).optString("區域")).checkNull //area
-//            Sales[1] = Tool(jsonArray.getJSONObject(1).optString("區別")).checkNull //district
-//            Sales[2] = Tool(jsonArray.getJSONObject(2).optString("總銷貨金額(月累積)")).checkNull //month
-//            Sales[3] = Tool(jsonArray.getJSONObject(2).optString("總銷貨金額(日)")).checkNull //day
-//        } catch (e: JSONException) {
-//            e.printStackTrace()
-//        }
-//    }
-//
-//    private fun Basical(loginData: String?) {
-//        NavigationTAG = "$NavigationTAG->Basical()"
-//        try {
-//            Employeer = arrayOfNulls(14)
-//            val jsonArray = JSONArray(loginData)
-//            Employeer[0] = Tool(jsonArray.getJSONObject(0).optString("Android_NAME")).checkNull //name
-//            Employeer[1] = Tool(jsonArray.getJSONObject(0).optString("Android_Email")).checkNull //email
-//            Employeer[2] = Tool(jsonArray.getJSONObject(0).optString("部門")).checkNull
-//            //section
-//            Employeer[3] = Tool(jsonArray.getJSONObject(0).optString("職務類別")).checkNull
-//            //unit
-//            Employeer[4] = Tool(jsonArray.getJSONObject(0).optString("職位")).checkNull
-//            //highestUnit
-//            Employeer[5] = Tool(jsonArray.getJSONObject(0).optBoolean("Manager").toString()).checkNull
-//            //Manager
-//            Employeer[6] = Tool(jsonArray.getJSONObject(0).optString("萬士益(庫存)")).checkNull
-//            //stockMaxe
-//            Employeer[7] = Tool(jsonArray.getJSONObject(0).optString("副牌(庫存)")).checkNull
-//            //stockElse
-//            Employeer[8] = Tool(jsonArray.getJSONObject(0).optString("員工編號")).checkNull //WorkerNumber
-//            Employeer[9] = Tool(jsonArray.getJSONObject(0).optString("查詢庫存")).checkNull //Permission(sales_stock)
-//            Employeer[10] = Tool(jsonArray.getJSONObject(0).optString("查詢業績")).checkNull //Permission(sales_customer)
-//            Employeer[11] = Tool(jsonArray.getJSONObject(0).optString("查詢料號庫存")).checkNull //Permission(services_stock)
-//            Employeer[12] = Tool(jsonArray.getJSONObject(0).optString("查詢錯誤代碼")).checkNull //Permission(services_errorcode)
-//            Employeer[13] = Tool(jsonArray.getJSONObject(0).optString("部_分公司")).checkNull //Permission(services_errorcode)
-//        } catch (e: JSONException) {
-//            e.printStackTrace()
-//        }
-//    }
+    }
 //
 //    /*
 //    * set menu ( name + number ) and email

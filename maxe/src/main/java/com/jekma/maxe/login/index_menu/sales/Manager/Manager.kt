@@ -1,4 +1,4 @@
-package com.company.maxe.Login.index_menu.sales.Manager
+package com.jekma.maxe.login.index_menu.sales.Manager
 
 import android.graphics.Color
 import android.os.Bundle
@@ -8,14 +8,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.widget.TextViewCompat
-import androidx.fragment.app.Fragment
+import com.jekma.baselibrary.BaseFragment
 import com.jekma.maxe.R
 import java.lang.NumberFormatException
 import java.text.DecimalFormat
 
-class Manager : Fragment()
-//    , View.OnClickListener, OnTouchListener
+class Manager : BaseFragment()
+//    , View.OnClickListener,
+//    OnTouchListener
 {
+    override val isShowMainBar: Boolean
+        get() = true
+    override val titleResId: Int
+        get() = R.string.maxe_title_manager
+    override val layoutResId: Int
+        get() = R.layout.manager
+
 //
 //    private var scrollView: ScrollView? = null
 //    var Bu: Array<String?>
@@ -31,8 +39,8 @@ class Manager : Fragment()
 //    private var Unit: String? = null
 //    private var highest: String? = null
 //    private var switcher = ""
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val root: View = inflater.inflate(R.layout.manager, container, false)
+//    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+//        val root: View = inflater.inflate(R.layout.manager, container, false)
 //        elements(root)
 //        val arguments: Bundle? = arguments
 //        //        String index = "nulll";
@@ -54,8 +62,8 @@ class Manager : Fragment()
 //                All(sector)
 //            }
 //        }
-        return root
-    }
+//        return root
+//    }
 //
 //    /*
 //    * Listen all elements Onclickevent

@@ -88,7 +88,7 @@
 <!--    業務專區-->
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.company.maxe.Login.index_menu.sales.SendFragment"
+        android:name="com.jekma.maxe.login.index_menu.sales.SendFragment"
         android:label="string/menu_send"
         tools:layout="@layout/fragment_send" >
         <action
@@ -119,7 +119,7 @@
 <!--    業務專區=>經銷商業績-->
 <fragment
         android:id="@+id/customer"
-        android:name="com.company.maxe.Login.index_menu.sales.Button.Customer_ALL.Customer"
+        android:name="com.jekma.maxe.login.index_menu.sales.Button.Customer_ALL.Customer"
         android:label="string/Label_customer"
         tools:layout="@layout/customer" >
         <action
@@ -147,7 +147,7 @@
     <!--    業務專區=>主管專區-->
         <fragment
             android:id="@+id/manager"
-            android:name="com.company.maxe.Login.index_menu.sales.Manager.Manager"
+            android:name="com.jekma.maxe.login.index_menu.sales.Manager.Manager"
             android:label="string/Label_manager"
             tools:layout="@layout/manager" />
 

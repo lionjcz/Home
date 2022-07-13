@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/blanchedalmond"
     android:layout_height="match_parent"
-    tools:context="com.company.maxe.Login.index_menu.sales.Button.Customer_ALL.Customer">
+    tools:context=".login.index_menu.sales.Button.Customer_ALL.Customer">
 
         <ListView
             android:id="@+id/select_all11"

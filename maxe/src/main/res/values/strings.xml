@@ -31,7 +31,7 @@
 <!--    <string name="Label_AnnouncementFinal">公告內容</string>-->
 
 <!--    <string name="Label_manager">主管專區</string>-->
-<!--    <string name="Label_customer">經銷商業績</string>-->
+    <string name="Label_customer">經銷商業績</string>
 <!--    <string name="Label_fragment_customer_sell">業績內容</string>-->
 <!--    <string name="Label_catalog">型錄搜尋</string>-->
 <!--    <string name="Label_textSerching">型號搜尋</string>-->
@@ -47,11 +47,7 @@
 <!--    <string name="Label_documents">表單</string>-->
 
 
-<!--    &lt;!&ndash;    sales menu functionbox name&ndash;&gt;-->
-<!--    <string name="sales_menu_customer_ShowAll">經銷商(全部)</string>-->
-<!--    <string name="sales_menu_customer_ShowBySerching">經銷商搜尋</string>-->
-<!--    <string name="sales_menu_goods_ShowByCatalog">型錄搜尋</string>-->
-<!--    <string name="sales_menu_goods_ShowByType">型號搜尋</string>-->
+
 
 <!--    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
 <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
@@ -80,11 +76,18 @@
     <string name="maxe_title_introduce">介紹</string>
     <string name="maxe_title_displayimageactivity">顯示圖片</string>
     <string name="maxe_title_register">註冊</string>
-
+    <string name="maxe_title_sales">業務專區</string>
     <string name="maxe_home_item_announcement">公告</string>
     <string name="maxe_home_item_slideshow">人資專區</string>
     <string name="maxe_home_item_tools">規章表單</string>
     <string name="maxe_home_item_share">服務專區</string>
     <string name="maxe_home_item_send">業務專區</string>
+
+    <!--    sales menu functionbox name-->
+    <string name="maxe_sales_menu_customer_ShowAll">經銷商(全部)</string>
+    <string name="maxe_sales_menu_customer_ShowBySerching">經銷商搜尋</string>
+    <string name="maxe_sales_menu_goods_ShowByCatalog">型錄搜尋</string>
+    <string name="maxe_sales_menu_goods_ShowByType">型號搜尋</string>
+    <string name="maxe_title_manager">主管專區</string>
 
 </resources>

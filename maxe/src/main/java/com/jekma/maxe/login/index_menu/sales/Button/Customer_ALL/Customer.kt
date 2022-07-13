@@ -1,4 +1,4 @@
-package com.company.maxe.Login.index_menu.sales.Button.Customer_ALL
+package com.jekma.maxe.login.index_menu.sales.Button.Customer_ALL
 
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
 import androidx.fragment.app.Fragment
+import com.jekma.baselibrary.BaseFragment
 //import androidx.navigation.NavController
 import com.jekma.maxe.R
 //import com.android.volley.AuthFailureError
@@ -14,8 +15,15 @@ import com.jekma.maxe.R
 import java.util.ArrayList
 import java.util.HashMap
 
-class Customer : Fragment() {
-//    private var mQueue: RequestQueue? = null
+class Customer : BaseFragment() {
+    override val isShowMainBar: Boolean
+        get() = true
+    override val titleResId: Int
+        get() = R.string.Label_customer
+    override val layoutResId: Int
+        get() = R.layout.customer
+
+    //    private var mQueue: RequestQueue? = null
 //    private var getRequest: StringRequest? = null
 //    private var Home_are: String? = null
 //    private var view3: View? = null
@@ -25,11 +33,11 @@ class Customer : Fragment() {
 //        view3 = view
 //    }
 //
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
-        val root: View = inflater.inflate(R.layout.customer, container, false)
+//    override fun onCreateView(
+//        inflater: LayoutInflater,
+//        container: ViewGroup?, savedInstanceState: Bundle?
+//    ): View? {
+//        val root: View = inflater.inflate(R.layout.customer, container, false)
 //        val Personal = activity as MainActivity?
 //        val SALES: Array<String> = Personal.SALES()
 //        Log.wtf(TAG, "職務類別 = " + Personal.PERSONAL().get(3))
@@ -52,8 +60,8 @@ class Customer : Fragment() {
 //        else {
 //            Toast.makeText(activity!!.applicationContext, "此功能限定業務人員", Toast.LENGTH_SHORT).show()
 //        }
-        return root
-    }
+//        return root
+//    }
 //
 //    //show all customer
 //    private fun WholeCustomer(Home_are: String?, root: View) {

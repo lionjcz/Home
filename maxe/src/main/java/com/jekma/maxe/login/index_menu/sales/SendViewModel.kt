@@ -1,14 +1,18 @@
-package com.company.maxe.Login.index_menu.sales
+package com.jekma.maxe.login.index_menu.sales
 
 import android.app.Application
+import android.os.Build
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.jekma.baselibrary.BaseViewModel
 //import com.android.volley.VolleyError
 import java.util.HashMap
 
-class SendViewModel(application: Application) : AndroidViewModel(application) {
+@RequiresApi(Build.VERSION_CODES.Q)
+class SendViewModel(application: Application) : BaseViewModel(application) {
 //
 //    private val mResult: MutableLiveData<String>
 //    private var string1234: MutableLiveData<String>? = null

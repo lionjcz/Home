@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/blanchedalmond"
-    tools:context="com.company.maxe.Login.index_menu.sales.Button.Customer_ALL.Customer"
+    tools:context=".login.index_menu.sales.Button.Customer_ALL.Customer"
     android:orientation="vertical">
 
     <LinearLayout
