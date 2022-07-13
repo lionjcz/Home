@@ -1,30 +1,13 @@
 package com.company.maxe.Login.index_menu.documents_laws.Laws
 
-import android.content.Context
-import android.graphics.Color
 //import androidx.lifecycle.ViewModelProvider.get
 //import androidx.navigation.Navigation.findNavController
 //import androidx.navigation.NavController.navigate
-import android.view.View.OnTouchListener
-import org.json.JSONArray
 import android.os.Bundle
 import com.jekma.maxe.R
 //import androidx.lifecycle.ViewModelProviders
-import android.widget.LinearLayout
-import org.json.JSONTokener
-import org.json.JSONObject
-import android.widget.TextView
-import android.text.TextUtils
-import android.util.Log
 import android.view.*
-import org.json.JSONException
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import com.company.maxe.Login.index_menu.documents_laws.Laws.Laws
-import java.io.UnsupportedEncodingException
-import java.net.URLEncoder
-import java.util.ArrayList
 
 //import com.company.maxe.Login.index_menu.hr.Training.Training;
 //import com.company.maxe.Tools.HRFinalContent.Content_BlockDownload;
@@ -50,7 +33,7 @@ class Laws : Fragment()
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.laws_fragment, container, false)
+        val root = inflater.inflate(R.layout.maxe_laws_fragment, container, false)
 //        Log.wtf(TAG, "onCreateView")
 //        mViewModel = ViewModelProviders.of(this).get(LawsViewModel::class.java)
 //        mViewModel.Laws().observe(viewLifecycleOwner, Observer<String?> { s -> result(s, root) })

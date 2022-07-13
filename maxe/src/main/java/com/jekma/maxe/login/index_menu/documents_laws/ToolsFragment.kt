@@ -1,14 +1,8 @@
 package com.jekma.maxe.login.index_menu.documents_laws
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import com.jekma.baselibrary.BaseFragment
 //import androidx.navigation.NavController
 import com.jekma.maxe.R
-import java.lang.IllegalStateException
 
 class ToolsFragment : BaseFragment()
 //    , View.OnClickListener
@@ -18,7 +12,7 @@ class ToolsFragment : BaseFragment()
     override val titleResId: Int
         get() = R.string.maxe_title_document_law
     override val layoutResId: Int
-        get() = R.layout.fragment_tools
+        get() = R.layout.maxe_fragment_tools
 
     //
 //    //    FunctionBox

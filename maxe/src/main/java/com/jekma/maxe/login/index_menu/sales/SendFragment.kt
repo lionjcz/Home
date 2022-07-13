@@ -28,7 +28,7 @@ class SendFragment : BaseBindingFragment<FragmentSendBinding, SendViewModel>(),
     override val titleResId: Int
         get() = R.string.maxe_title_sales
     override val layoutResId: Int
-        get() = R.layout.fragment_send
+        get() = R.layout.maxe_fragment_send
     override var permissionOnViewListener: PermissionOnView? = null
     private val TAG = "SendFragment"
 

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maxe_loginmaxe"
+    tools:context="com.jekma.maxe.login.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox1"-->
+<!--        style="@style/LoginTextInputLayoutStyle"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="請輸入E-mail"
+            android:textColorHint="@color/maxe_white"
+            android:theme="@style/AppThemeInputLayout"
+            app:boxStrokeColor="@color/maxe_white"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            app:counterOverflowTextAppearance="@style/OverFlowColor"
+            app:counterTextAppearance="@style/CounterText"
+            app:hintTextAppearance="@style/hintText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Login_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/maxe_white"
+                android:textColorHighlight="@color/maxe_black"
+                tools:text="123213"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox1"-->
+<!--        style="@style/LoginTextInputLayoutStyle"-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="請輸入密碼"
+            android:inputType="textPassword"
+            android:theme="@style/AppThemeInputLayout"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:counterOverflowTextAppearance="@style/OverFlowColor"
+            app:counterTextAppearance="@style/CounterText"
+            app:hintTextAppearance="@style/hintText"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/maxe_white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Login_Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSend"
+                android:inputType="textPassword"
+                android:textColorHighlight="@color/maxe_black"
+                android:textCursorDrawable="@drawable/maxe_color_cursor"
+                android:textColor="@color/maxe_white"
+                tools:text="123213"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/Remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="記住我的萬士益信箱"
+            android:textColor="@color/maxe_white"
+            app:buttonTint="@color/maxe_white" />
+
+        <TextView
+            android:id="@+id/Login_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:onClick="Login"
+            android:text="登入"
+            android:textAlignment="center"
+            android:textColor="@color/maxe_white"
+            android:textSize="36dp" />
+
+        <TextView
+            android:id="@+id/forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_vertical"
+            android:autoSizeTextType="uniform"
+            android:lines="1"
+            android:onClick="forgot"
+            android:text="忘記信箱，密碼?"
+            android:textAlignment="center"
+            android:textColor="@color/maxe_white"
+            android:textCursorDrawable="@drawable/maxe_color_cursor"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="Version 2-7-29"
+            android:textColor="@color/maxe_white"
+            android:textSize="11sp"
+
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
+

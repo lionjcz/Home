@@ -1,6 +1,5 @@
 package com.jekma.maxe.Tools.HRFinalContent
 
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,7 @@ import com.jekma.maxe.R
 class Content : Fragment() {
     private var webview: WebView? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val root: View = inflater.inflate(R.layout.newemployeerfinal, container, false)
+        val root: View = inflater.inflate(R.layout.maxe_newemployeerfinal, container, false)
 //        webview = root.findViewById(R.id.NEwebview)
 //        val arguments: Bundle? = arguments
 //        if (arguments == null) {

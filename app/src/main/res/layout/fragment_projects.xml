@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="@color/maxe_black"
         tools:context=".ProjectsFragment">
 
         <LinearLayout
@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical|center_horizontal"
-                    android:textColor="@color/white"
+                    android:textColor="@color/maxe_white"
                     android:text="Maxe" />
             </LinearLayout>
 

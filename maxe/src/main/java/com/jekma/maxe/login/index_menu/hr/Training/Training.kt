@@ -1,17 +1,9 @@
 package com.company.maxe.Login.index_menu.hr.Training
 
-import android.content.Context
-import android.graphics.Color
-import android.view.View
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 //import androidx.navigation.NavController
 //import com.company.maxe.R
 import com.jekma.baselibrary.BaseFragment
 import com.jekma.maxe.R
-import java.io.UnsupportedEncodingException
-import java.net.URLEncoder
-import java.util.ArrayList
 
 class Training :BaseFragment()
 //    Fragment(), View.OnClickListener, OnTouchListener
@@ -261,5 +253,5 @@ class Training :BaseFragment()
     override val titleResId: Int
         get() = R.string.maxe_title_Training
     override val layoutResId: Int
-        get() = R.layout.training
+        get() = R.layout.maxe_training
 }

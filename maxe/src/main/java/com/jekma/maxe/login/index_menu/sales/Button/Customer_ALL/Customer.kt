@@ -12,7 +12,7 @@ class Customer : BaseFragment() {
     override val titleResId: Int
         get() = R.string.maxe_label_customer
     override val layoutResId: Int
-        get() = R.layout.customer
+        get() = R.layout.maxe_customer
 
     //    private var mQueue: RequestQueue? = null
 //    private var getRequest: StringRequest? = null

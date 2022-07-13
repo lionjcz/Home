@@ -1,18 +1,12 @@
 package com.company.maxe.Login.index_menu.sales.Button.Customer_ALL
 
-import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import com.jekma.maxe.R
 //import com.android.volley.AuthFailureError
-import java.util.ArrayList
-import java.util.HashMap
 
 class fragment_customer_sell : Fragment() {
 //
@@ -67,7 +61,7 @@ class fragment_customer_sell : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root: View = inflater.inflate(R.layout.fragment_customer_sell, container, false)
+        val root: View = inflater.inflate(R.layout.maxe_fragment_customer_sell, container, false)
 //        val arguments: Bundle? = arguments
 //        setColor(root)
 //        if (arguments == null) {

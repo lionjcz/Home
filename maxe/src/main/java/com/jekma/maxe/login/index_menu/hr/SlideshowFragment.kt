@@ -55,5 +55,5 @@ class SlideshowFragment : BaseFragment() {
     override val titleResId: Int
         get() = R.string.maxe_title_hr
     override val layoutResId: Int
-        get() = R.layout.fragment_slideshow
+        get() = R.layout.maxe_fragment_slideshow
 }

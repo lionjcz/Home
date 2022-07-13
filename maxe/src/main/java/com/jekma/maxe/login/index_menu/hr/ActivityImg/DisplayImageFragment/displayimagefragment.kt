@@ -39,7 +39,7 @@ class displayimagefragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_displayimagefragment, container, false)
+        return inflater.inflate(R.layout.maxe_fragment_displayimagefragment, container, false)
     } //    public void onButtonPressed(Uri uri) {
     //        if (mListener != null) {
     //            mListener.onFragmentInteraction(uri);

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maxe_wheat"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        >
+<!--        User input box-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EditTextview"
+                    android:imeOptions="actionSend"
+                    android:inputType="text"
+                    android:hint="請點此搜尋" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="28dp"
+                android:textAlignment="center"
+                android:textColor="@color/maxe_red"
+                android:text="提醒您，每日更新時間於早上16:00\n(不包含例假日)"
+                android:autoSizeTextType="uniform"/>
+        </LinearLayout>
+<!--        CheckBox-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            >
+            <CheckBox
+                android:id="@+id/Item_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="品號"
+                android:layout_weight="1"
+                />
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/Decription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="品名"
+                android:layout_weight="1"
+                />
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/Specification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="規格"
+                android:layout_weight="1"
+                />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/onlysearch_itemnumber_first_4_digits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="品號前四碼"
+                android:layout_weight="1"
+                />
+
+
+
+        </LinearLayout>
+<!--        ButtonBox-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tata_Ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="查詢料號庫存" />
+
+            <Button
+                android:id="@+id/Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="清空" />
+        </LinearLayout>
+<!--        ContentBox-->
+        <LinearLayout
+            android:id="@+id/Services_Error_Result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TextViewTextViewTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

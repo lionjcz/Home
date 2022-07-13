@@ -7,7 +7,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/wheat"
+        android:background="@color/maxe_wheat"
         android:orientation="vertical"
         tools:context="com.jekma.maxe.login.index_menu.home.HomeFragment">
 
@@ -40,7 +40,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/announcements"
+                        android:src="@mipmap/maxe_announcements"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -53,7 +53,7 @@
                         android:gravity="center"
                         android:maxLines="1"
                         android:text="@string/maxe_home_item_announcement"
-                        android:textColor="@color/black"
+                        android:textColor="@color/maxe_black"
                         tools:ignore="NestedWeights" />
 
                 </LinearLayout>
@@ -75,7 +75,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/sales"
+                        android:src="@mipmap/maxe_sales"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -88,7 +88,7 @@
                         android:gravity="center"
                         android:maxLines="1"
                         android:text="@string/maxe_home_item_send"
-                        android:textColor="@color/black"
+                        android:textColor="@color/maxe_black"
                         tools:ignore="NestedWeights" />
 
                 </LinearLayout>
@@ -109,7 +109,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/repair"
+                        android:src="@mipmap/maxe_repair"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -122,7 +122,7 @@
                         android:gravity="center"
                         android:maxLines="1"
                         android:text="@string/maxe_home_item_share"
-                        android:textColor="@color/black"
+                        android:textColor="@color/maxe_black"
                         tools:ignore="NestedWeights" />
 
                 </LinearLayout>
@@ -151,7 +151,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/hr"
+                        android:src="@mipmap/maxe_hr"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -164,7 +164,7 @@
                         android:gravity="center"
                         android:maxLines="1"
                         android:text="@string/maxe_home_item_slideshow"
-                        android:textColor="@color/black"
+                        android:textColor="@color/maxe_black"
                         tools:ignore="NestedWeights" />
 
                 </LinearLayout>
@@ -184,7 +184,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/documents_law"
+                        android:src="@mipmap/maxe_documents_law"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -197,7 +197,7 @@
                         android:gravity="center"
                         android:maxLines="1"
                         android:text="@string/maxe_home_item_tools"
-                        android:textColor="@color/black"
+                        android:textColor="@color/maxe_black"
                         tools:ignore="NestedWeights" />
 
                 </LinearLayout>
@@ -218,7 +218,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/documents_law"
+                        android:src="@mipmap/maxe_documents_law"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -230,7 +230,7 @@
                         android:autoSizeTextType="uniform"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:textColor="@color/black"
+                        android:textColor="@color/maxe_black"
                         tools:ignore="NestedWeights" />
 
                 </LinearLayout>

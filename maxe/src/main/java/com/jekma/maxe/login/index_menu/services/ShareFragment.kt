@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 //import androidx.navigation.NavController
-import com.company.maxe.Login.MainActivity
 import com.jekma.baselibrary.BaseFragment
 import com.jekma.maxe.R
 import java.lang.IllegalStateException
@@ -21,7 +19,7 @@ class ShareFragment : BaseFragment(), View.OnClickListener {
     override val titleResId: Int
         get() = R.string.maxe_title_services
     override val layoutResId: Int
-        get() = R.layout.fragment_share
+        get() = R.layout.maxe_fragment_share
 
     private lateinit var errorcode: LinearLayout
     private lateinit var stock: LinearLayout
@@ -30,7 +28,7 @@ class ShareFragment : BaseFragment(), View.OnClickListener {
         inflater: LayoutInflater,
         container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        val root: View = inflater.inflate(R.layout.fragment_share, container, false)
+        val root: View = inflater.inflate(R.layout.maxe_fragment_share, container, false)
         ButtonBox(root)
         PermissionCheck("啟動", stock) //查詢料號庫存 //Permission(services_stock)
         PermissionCheck("啟動", errorcode) //查詢錯誤代碼 Permission(services_errorcode)

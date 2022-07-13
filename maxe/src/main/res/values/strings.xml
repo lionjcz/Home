@@ -1,64 +1,48 @@
 <resources>
     <string name="maxe_app_name">MAXE</string>
-<!--    <string name="navigation_drawer_open">Open navigation drawer</string>-->
-<!--    <string name="navigation_drawer_close">Close navigation drawer</string>-->
-<!--    <string name="nav_header_title">Android Studio</string>-->
-<!--    <string name="nav_header_subtitle">android.studio@android.com</string>-->
-<!--    <string name="nav_header_desc">Navigation header</string>-->
-<!--    <string name="action_settings">Settings</string>-->
+    <!--  首頁  -->
+    <string name="maxe_menu_home">首頁</string>
+    <string name="maxe_home_item_announcement">公告</string>
+    <string name="maxe_home_item_send">業務專區</string>
+    <string name="maxe_home_item_slideshow">人資專區</string>
+    <string name="maxe_home_item_tools">規章表單</string>
+    <string name="maxe_home_item_share">服務專區</string>
 
-<!--    <string name="menu_home">首頁</string>-->
-<!--    &lt;!&ndash;    <string name="menu_announcements">01公告</string>&ndash;&gt;-->
+    <!--  業務專區  -->
+    <string name="maxe_sales_item_customer_searching">經銷商搜尋</string>
+    <string name="maxe_sales_item_searching_by_catalog">型錄搜尋</string>
+    <string name="maxe_sales_item_search_by_type">型號搜尋</string>
+
+    <!--  人資專區  -->
+    <string name="maxe_HR_EmployeersTraining">在職訓練</string>
+    <string name="maxe_HR_NewTraining">新人訓練</string>
+    <string name="maxe_HR_NewIntroduce">新人介紹</string>
+    <string name="maxe_HR_YearData">年會資料</string>
+    <string name="maxe_HR_ActivityImgs">活動照片</string>
+
+    <!--  規章辦法  -->
+    <string name="maxe_Label_laws">規章辦法</string>
+    <string name="maxe_Label_documents">表單</string>
+
+    <!--  維修專區  -->
+    <string name="maxe_Label_ser_ErrCod">錯誤代碼</string>
+    <string name="maxe_Label_ser_stock">查詢料號庫存</string>
 
 
-    <!-- HR L2 -->
-<!--    <string name="HR_NewIntroduce">新人介紹</string>-->
-<!--    <string name="HR_NewTraining">新人訓練</string>-->
-<!--    <string name="HR_EmployeersTraining">在職訓練</string>-->
-<!--    <string name="HR_YearData">年會資料</string>-->
-<!--    <string name="HR_ActivityImgs">活動照片</string>-->
 
 
 
-
-
-
-
-<!--    <string name="Label_AnnouncementFinal">公告內容</string>-->
-
-<!--    <string name="Label_manager">主管專區</string>-->
+    <string name="maxe_Label_AnnouncementFinal">公告內容</string>
+    <string name="maxe_Label_manager">主管專區</string>
     <string name="maxe_label_customer">經銷商業績</string>
-<!--    <string name="Label_fragment_customer_sell">業績內容</string>-->
-<!--    <string name="Label_catalog">型錄搜尋</string>-->
-<!--    <string name="Label_textSerching">型號搜尋</string>-->
-
-<!--    <string name="Label_ser_ErrCod">錯誤代碼</string>-->
-<!--    <string name="Label_ser_stock">查詢料號庫存</string>-->
-
-<!--    <string name="Label_introduce">新人介紹</string>-->
-<!--    <string name="Label_newTraining">新人訓練</string>-->
-<!--    <string name="Label_training">在職訓練</string>-->
-<!--    <string name="Label_"></string>-->
-<!--    <string name="Label_laws">規章辦法</string>-->
-<!--    <string name="Label_documents">表單</string>-->
-
-
-
-
-<!--    &lt;!&ndash; TODO: Remove or change this placeholder text &ndash;&gt;-->
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
-<!--    <string name="todo">TODO</string>-->
-
-
-
-
-
-<!--    <item type="id" name="Selected_photo"></item>-->
-
-
-
-    <!--    2022/7/12-->
-    <string name="projects_maxe">MAXE</string>
+    <string name="maxe_Label_fragment_customer_sell">業績內容</string>
+    <string name="maxe_Label_catalog">型錄搜尋</string>
+    <string name="maxe_Label_textSerching">型號搜尋</string>
+    <string name="maxe_Label_introduce">新人介紹</string>
+    <string name="maxe_Label_newTraining">新人訓練</string>
+    <string name="maxe_Label_training">在職訓練</string>
+    <string name="maxe_hello_blank_fragment">Hello blank fragment</string>
+    <string name="maxe_projects_maxe">MAXE</string>
     <string name="maxe_title_welcome">歡迎</string>
     <string name="maxe_title_announcement">公告</string>
     <string name="maxe_title_main">Main葉面</string>
@@ -72,31 +56,18 @@
     <string name="maxe_title_displayimageactivity">顯示圖片</string>
     <string name="maxe_title_register">註冊</string>
     <string name="maxe_title_sales">業務專區</string>
-    <string name="maxe_home_item_announcement">公告</string>
-    <string name="maxe_home_item_slideshow">人資專區</string>
-    <string name="maxe_home_item_tools">規章表單</string>
-    <string name="maxe_home_item_share">服務專區</string>
-    <string name="maxe_home_item_send">業務專區</string>
-
-    <!--    sales menu functionbox name-->
     <string name="maxe_sales_menu_customer_ShowAll">經銷商(全部)</string>
-    <string name="maxe_sales_menu_customer_ShowBySerching">經銷商搜尋</string>
-    <string name="maxe_sales_menu_goods_ShowByCatalog">型錄搜尋</string>
-    <string name="maxe_sales_menu_goods_ShowByType">型號搜尋</string>
     <string name="maxe_title_manager">主管專區</string>
     <string name="maxe_title_services">服務專區</string>
-
-    <!--    services-->
     <string name="maxe_services_errorcode">錯誤代碼</string>
     <string name="maxe_services_goods">查詢料號庫存</string>
     <string name="maxe_title_document_law">@string/maxe_home_item_tools</string>
-
-    <!-- HR L-->
     <string name="maxe_title_hr">@string/maxe_home_item_slideshow</string>
-
-    <!-- Documents_law L2-->
     <string name="maxe_documents_law_documents">表單</string>
     <string name="maxe_documents_law_laws">規章辦法</string>
+    <string name="maxe_nav_header_title">Android Studio</string>
+    <string name="maxe_nav_header_subtitle">android.studio@android.com</string>
+    <string name="maxe_menu_announcement">01公告</string>
 
 
 </resources>

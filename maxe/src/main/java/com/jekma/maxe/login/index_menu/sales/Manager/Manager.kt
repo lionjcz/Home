@@ -13,7 +13,6 @@ import com.jekma.baselibrary.BaseFragment
 import com.jekma.maxe.R
 import org.json.JSONException
 import java.lang.NumberFormatException
-import java.text.DecimalFormat
 
 class Manager : BaseFragment()
     , View.OnClickListener
@@ -24,7 +23,7 @@ class Manager : BaseFragment()
     override val titleResId: Int
         get() = R.string.maxe_title_manager
     override val layoutResId: Int
-        get() = R.layout.manager
+        get() = R.layout.maxe_manager
 
 //
     private var scrollView: ScrollView? = null
@@ -140,7 +139,7 @@ class Manager : BaseFragment()
         layoutParams.setMargins(0, 0, 0, 0)
         TextViewCompat.setAutoSizeTextTypeWithDefaults(textView, TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
         textView.setLines(1)
-        textView.setTextColor(resources.getColor(R.color.black))
+        textView.setTextColor(resources.getColor(R.color.maxe_black))
         textView.setLayoutParams(layoutParams)
         return textView
     }
@@ -226,7 +225,7 @@ class Manager : BaseFragment()
         layoutParams.setMargins(0, 0, 0, 0)
         TextViewCompat.setAutoSizeTextTypeWithDefaults(Employeer, TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
         Employeer.setLines(1)
-        Employeer.setTextColor(resources.getColor(R.color.black))
+        Employeer.setTextColor(resources.getColor(R.color.maxe_black))
         Employeer.setLayoutParams(layoutParams)
         return Employeer
     }
@@ -250,7 +249,7 @@ class Manager : BaseFragment()
         Employeer.setTextSize(25f)
         TextViewCompat.setAutoSizeTextTypeWithDefaults(Employeer, TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
         Employeer.setLines(1)
-        Employeer.setTextColor(resources.getColor(R.color.black))
+        Employeer.setTextColor(resources.getColor(R.color.maxe_black))
         Employeer.setLayoutParams(layoutParams)
         return Employeer
     }
@@ -651,7 +650,7 @@ class Manager : BaseFragment()
             LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, 1F)
         layoutParams.setMargins(50, 50, 50, 50)
         val linearLayout = LinearLayout(requireActivity().applicationContext)
-        linearLayout.setBackgroundColor(resources.getColor(R.color.maroon))
+        linearLayout.setBackgroundColor(resources.getColor(R.color.maxe_maroon))
         linearLayout.setLayoutParams(layoutParams)
         linearLayout.setOrientation(LinearLayout.VERTICAL)
         linearLayout.setPadding(0, 20, 0, 0)

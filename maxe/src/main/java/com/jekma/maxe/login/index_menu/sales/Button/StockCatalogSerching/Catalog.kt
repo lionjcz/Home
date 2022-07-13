@@ -1,21 +1,12 @@
 package com.company.maxe.Login.index_menu.sales.Button.StockCatalogSerching
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 //import com.android.volley.AuthFailureError
-import com.company.maxe.Login.MainActivity
-import com.company.maxe.Tools.URL.VolleyBridge
 import com.jekma.maxe.R
-import java.util.ArrayList
-import java.util.HashMap
 
 class Catalog : Fragment()
 //    , View.OnClickListener
@@ -51,7 +42,7 @@ class Catalog : Fragment()
 //    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.catalog, container, false)
+        return inflater.inflate(R.layout.maxe_catalog, container, false)
     }
 //
 //    /*

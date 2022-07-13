@@ -292,5 +292,5 @@ class Documents : BaseFragment()
     override val titleResId: Int
         get() = R.string.maxe_title_document
     override val layoutResId: Int
-        get() = R.layout.documents_fragment
+        get() = R.layout.maxe_documents_fragment
 }

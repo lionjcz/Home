@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:padding="16dp"
+
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="請注意若您忘記信箱，請洽萬士益冷氣人資2213"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:textColor="@color/maxe_red"></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:hint="姓名"
+        android:textColorHint="@color/maxe_black"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+<!--    <EditText-->
+<!--        android:id="@+id/for_name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="請輸入姓名" />-->
+
+    <EditText
+        android:id="@+id/for_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="請輸入姓名" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:hint="E-mail"
+        android:textColorHint="@color/maxe_black"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+<!--    <EditText-->
+<!--        android:id="@+id/for_email"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="請輸入email" />-->
+
+
+    <EditText
+        android:id="@+id/for_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="請輸入email" />
+
+</LinearLayout>

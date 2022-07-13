@@ -1,22 +1,12 @@
 package com.company.maxe.Login.index_menu.hr.ActivityImg
 
-import android.content.Context
-import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import com.jekma.maxe.R
 //import com.bumptech.glide.Glide
-import java.io.UnsupportedEncodingException
-import java.net.URLEncoder
-import java.util.ArrayList
 
 class activityimg : Fragment()
 //    , View.OnClickListener, OnTouchListener
@@ -40,7 +30,7 @@ class activityimg : Fragment()
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root: View = inflater.inflate(R.layout.activityimg_fragment, container, false)
+        val root: View = inflater.inflate(R.layout.maxe_activityimg_fragment, container, false)
 //        mViewModel = ViewModelProviders.of(this).get(ActivityimgViewModel::class.java)
 //        mViewModel.Activityimg()
 //            .observe(viewLifecycleOwner, Observer<String?> { s -> result(s, root) })

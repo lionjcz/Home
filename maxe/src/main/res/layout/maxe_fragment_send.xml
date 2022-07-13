@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="FragmentSendBinding">
+        <variable
+            name="vm"
+            type="com.jekma.maxe.login.index_menu.sales.SendViewModel" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/maxe_wheat"
+        android:id="@+id/sales_door"
+        android:orientation="vertical">
+
+        <!--    DataBox-->
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/general_sales">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/district"
+                android:background="@drawable/maxe_testiconnnnnnn"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:radius="900dip"
+
+                    android:text="地區"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp"
+                    android:textColor="@color/maxe_black"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/index_district"
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Area"
+                    android:textColor="@color/maxe_black"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/area"
+                android:background="@drawable/maxe_testiconnnnnnn"
+                android:layout_marginBottom="10dp"
+
+                >
+
+                <TextView
+                    android:text="區碼"
+                    android:textSize="30dp"
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/index_area"
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    android:textColor="@color/maxe_black"
+                    android:background="#CDF5C9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Area"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/maxe_testiconnnnnnn"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/day">
+
+                <TextView
+                    android:text="昨日業績"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="30dp"
+                    android:textColor="@color/maxe_black"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:lines="1"
+                    app:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="day"
+                    android:textSize="30dp"
+                    android:textColor="@color/maxe_black"
+
+                    android:id="@+id/index_day"
+
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/maxe_testiconnnnnnn"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/month">
+
+                <TextView
+                    android:text="當月累積業績(至昨日)"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp"
+                    android:lines="1"
+                    android:textColor="@color/maxe_black"
+
+                    app:autoSizeTextType="uniform"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="month"
+                    android:lines="1"
+                    android:textColor="@color/maxe_black"
+
+                    app:autoSizeTextType="uniform"
+                    android:textSize="30dp"
+
+                    android:id="@+id/index_month"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <!--ManagerBox-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/Manager"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+
+        </LinearLayout>
+
+        <!--FunctionBox-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <!--        layer1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <!--1-1-->
+                <LinearLayout
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:id="@+id/CustomerSerchingBTN">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="TODO"
+                        android:src="@mipmap/maxe_customer" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/maxe_black"
+                        android:maxLines="1"
+                        android:background="@color/maxe_wheat"
+                        android:text="@string/maxe_sales_item_customer_searching" />
+
+                </LinearLayout>
+
+                <!--1-2-->
+                <LinearLayout
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/TextSerchingBTN"
+                    android:tag="string/menu_announcement">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/maxe_goods" />
+
+                    <TextView
+                        android:id="@+id/btn2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:background="@color/maxe_wheat"
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:textColor="@color/maxe_black"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:text="@string/maxe_sales_item_search_by_type" />
+
+                </LinearLayout>
+                <!--1-3-->
+                <LinearLayout
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:id="@+id/CatalogSerBTN"
+
+                    >
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="TODO"
+                        android:src="@mipmap/maxe_goods" />
+
+                    <TextView
+                        android:id="@+id/btn3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/maxe_black"
+                        android:maxLines="1"
+                        android:background="@color/maxe_wheat"
+                        android:text="@string/maxe_sales_item_searching_by_catalog" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--        layer2-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <!--2-1-->
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/CustomerBTN"
+                    android:tag="string/menu_announcement">
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/maxe_customer" />
+
+                    <TextView
+
+                        android:id="@+id/btn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:background="@color/maxe_wheat"
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:textColor="@color/maxe_black"
+                        android:autoSizeMaxTextSize="20dp"
+                        android:text="@string/maxe_sales_menu_customer_ShowAll" />
+                </LinearLayout>
+                <!--2-2-->
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+
+                    >
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="TODO"
+                        android:src="@mipmap/maxe_goods" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/maxe_black"
+                        android:maxLines="1"
+                        android:background="@color/maxe_wheat"
+                        android:text="CatalogSer" />
+
+                </LinearLayout>
+                <!--2-3-->
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/maxe_custom_border"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="TODO"
+                        android:src="@mipmap/maxe_goods" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+                        android:autoSizeTextType="uniform"
+                        android:textColor="@color/maxe_black"
+                        android:maxLines="1"
+                        android:background="@color/maxe_wheat"
+                        android:text="CatalogSer" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

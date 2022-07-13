@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.jekma.baselibrary.BaseFragment
 import androidx.navigation.fragment.NavHostFragment
+import java.lang.Exception
 
 class ProjectsNavContainerFragment : BaseFragment() {
 
@@ -17,13 +18,17 @@ class ProjectsNavContainerFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val navHostFragment =
-            childFragmentManager.findFragmentById(R.id.projects_nav_host) as NavHostFragment
-        val navController = navHostFragment.navController
-        val inflater = navController.navInflater
-        val defaultNavGraph = com.jekma.maxe.R.navigation.mobile_navigation
-        val graph = inflater.inflate(defaultNavGraph)
-        navController.graph = graph
+        try {
+            val navHostFragment =
+                childFragmentManager.findFragmentById(R.id.projects_nav_host) as NavHostFragment
+            val navController = navHostFragment.navController
+            val inflater = navController.navInflater
+            val defaultNavGraph = com.jekma.maxe.R.navigation.maxe_mobile_navigation
+            val graph = inflater.inflate(defaultNavGraph)
+            navController.graph = graph
+        }catch (e:Exception){
+            e.printStackTrace()
+        }
     }
 
 

@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/maxe_wheat"
+    tools:context=".login.index_menu.sales.Button.Customer_ALL.Customer"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+                    android:text="Customer"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/test_textipt"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:textColor="@color/maxe_black"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="16"
+                            android:textSize="30dp"
+                            android:text="107" />
+
+                        <TextView
+                            android:textColor="@color/maxe_black"
+
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="30dp"
+                            android:layout_weight="16"
+                            android:text="108" />
+
+                        <TextView
+                            android:textColor="@color/maxe_black"
+
+                            android:layout_weight="16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="30dp"
+                            android:text="109" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="11月"
+                    android:textColor="@color/maxe_black"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Nov_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Nov_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="16"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Nov_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="12月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/Dec_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="16"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Dec_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="16"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Dec_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="01月"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Jan_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/Jan_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Jan_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="02月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Feb_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/Feb_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Feb_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="03月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Mar_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/Mar_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Mar_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="04月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Apr_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/Apr_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Apr_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="05月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/May_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/May_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/May_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="06月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Jun_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/Jun_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Jun_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="07月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Jul_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/Jul_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Jul_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:textColor="@color/maxe_black"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="08月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Aug_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/Aug_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Aug_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="09月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Sep_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+
+                        <TextView
+                            android:id="@+id/Sep_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Sep_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="10月"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Oct_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Oct_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/Oct_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <TextView
+                    android:textColor="@color/maxe_black"
+
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="期間合計金額"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="66.6"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="33.3"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/ttl_106"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/ttl_107"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="16"
+                            android:gravity="center"
+                            android:text="金額" />
+                        <TextView
+                            android:id="@+id/ttl_108"
+                            android:layout_weight="16"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="金額" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>
+
+

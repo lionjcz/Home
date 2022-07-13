@@ -23,7 +23,7 @@ class Content : BaseBindingFragment<ContentAnnounceFinalBinding, ContentViewMode
     override val titleResId: Int
         get() = R.string.maxe_title_announce_content
     override val layoutResId: Int
-        get() = R.layout.content_announcefinal
+        get() = R.layout.maxe_content_announcefinal
 
     override val isShowMainBar: Boolean
         get() = true

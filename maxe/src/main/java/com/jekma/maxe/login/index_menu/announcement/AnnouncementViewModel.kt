@@ -97,7 +97,7 @@ class AnnouncementViewModel(application: Application) : BaseViewModel(applicatio
             val nameparams = TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.MATCH_PARENT)
             Name.layoutParams = nameparams
             Name.setTextColor(Color.BLACK)
-            sign.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_arrow_forward_black_24dp, 0, 0, 0)
+            sign.setCompoundDrawablesWithIntrinsicBounds(R.drawable.maxe_ic_arrow_forward_black_24dp, 0, 0, 0)
             sign.setTextColor(Color.BLACK)
             toWho.text = towho
             toWho.setTextColor(Color.BLACK)

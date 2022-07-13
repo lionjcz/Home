@@ -3,7 +3,6 @@ package com.company.maxe.Login.index_menu.hr.ActivityImg.DisplayImageFragment
 import com.jekma.baselibrary.BaseFragment
 import com.jekma.maxe.R
 //import com.bumptech.glide.Glide
-import java.net.URL
 
 class displayimageactivity :BaseFragment() {
     //    private var downloadImageFromURL: AsyncTask<String, String, String>? = null
@@ -257,5 +256,5 @@ class displayimageactivity :BaseFragment() {
     override val titleResId: Int
         get() = R.string.maxe_title_displayimageactivity
     override val layoutResId: Int
-        get() = R.layout.fragment_displayimageactivity
+        get() = R.layout.maxe_fragment_displayimageactivity
 }

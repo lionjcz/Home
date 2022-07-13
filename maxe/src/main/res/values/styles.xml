@@ -27,7 +27,7 @@
 
     <!--    Accent color-->
     <style name="AppThemeInputLayout" parent="AppTheme">
-        <item name="colorAccent">@color/white</item>
+        <item name="colorAccent">@color/maxe_white</item>
     </style>
 
     <!--    outline color and inside text hint color  -->
@@ -38,11 +38,11 @@
 
     <style name="CounterText" parent="TextAppearance.Design.Counter">
         <item name="android:textSize">12dp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/maxe_white</item>
     </style>
     <!--    text hint color of outline-->
     <style name="hintText" parent="android:TextAppearance">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/maxe_white</item>
     </style>
 
     <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
@@ -53,7 +53,7 @@
 
 <!--    OverFlowColor-->
     <style name="OverFlowColor" parent="TextAppearance.Design.Counter">
-        <item name="android:textColor">@color/red</item>
+        <item name="android:textColor">@color/maxe_red</item>
     </style>
 
     <!--    login-->

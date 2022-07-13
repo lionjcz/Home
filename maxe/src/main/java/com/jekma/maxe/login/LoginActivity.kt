@@ -45,6 +45,13 @@ import com.jekma.maxe.R
 //import kotlin.jvm.Throws
 
 class LoginActivity : BaseFragment(){
+
+    override val isShowMainBar: Boolean
+        get() = true
+    override val titleResId: Int
+        get() = R.string.maxe_projects_maxe
+    override val layoutResId: Int
+        get() = R.layout.maxe_fragment_login
     //
 //    /**
 //     * DataBinding
@@ -596,8 +603,4 @@ class LoginActivity : BaseFragment(){
 //        DEVICEIMEI()
 //        DEVICEINFO(NavigationTAG) //DEVICEINFO--1
 //    }
-    override val titleResId: Int
-        get() = R.string.projects_maxe
-    override val layoutResId: Int
-        get() = R.layout.activity_login
 }

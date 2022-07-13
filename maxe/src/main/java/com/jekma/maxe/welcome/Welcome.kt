@@ -55,7 +55,7 @@ class Welcome : BaseFragment() {
     override val titleResId: Int
         get() = R.string.maxe_title_welcome
     override val layoutResId: Int
-        get() = R.layout.fragment_welcome
+        get() = R.layout.maxe_fragment_welcome
 }
 
 //internal class GlideImageLoader : ImageLoader() {

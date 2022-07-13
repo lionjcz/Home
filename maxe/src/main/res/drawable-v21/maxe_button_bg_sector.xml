@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:drawable="@drawable/maxe_button_bg_enabled" />
+    <!-- Standard background color -->
+
+    <item  android:drawable="@drawable/maxe_button_bg_disabled" />
+    <!-- Color when the row is selected -->
+
+</selector>

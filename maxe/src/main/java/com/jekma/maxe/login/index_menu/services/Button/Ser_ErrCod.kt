@@ -1,14 +1,8 @@
 package com.company.maxe.Login.index_menu.services.Button
 
-import android.content.Context
 import android.os.Bundle
-import android.view.KeyEvent
-import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import androidx.core.widget.TextViewCompat
 import androidx.fragment.app.Fragment
 //import com.android.volley.AuthFailureError
-import java.util.HashMap
 
 import android.view.LayoutInflater
 import android.view.View
@@ -39,7 +33,7 @@ class Ser_ErrCod : Fragment()
 //    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val root: View = inflater.inflate(R.layout.fragment_ser_errcod, container, false)
+        val root: View = inflater.inflate(R.layout.maxe_fragment_ser_errcod, container, false)
 //        editview = root.findViewById<EditText>(R.id.EditTextview)
 //        ok = root.findViewById(R.id.tata1_Ok)
 //        ok.setOnClickListener(this)

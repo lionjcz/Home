@@ -10,7 +10,7 @@ import com.jekma.maxe.R
 
 class BySerchingResult : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val root: View = inflater.inflate(R.layout.fragment_byserchingresult, container, false)
+        val root: View = inflater.inflate(R.layout.maxe_fragment_byserchingresult, container, false)
         val arguments: Bundle? = arguments
         if (arguments != null) {
             val data: String? = arguments.getString("DemoData")

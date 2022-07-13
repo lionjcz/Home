@@ -6,16 +6,11 @@ package com.company.maxe.Login
 //import com.company.maxe.Tools.Tool
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import com.company.maxe.Tools.Device.Device
 import com.company.maxe.Tools.Tool
 import com.jekma.baselibrary.BaseFragment
 import com.jekma.maxe.R
 import org.json.JSONArray
 import org.json.JSONException
-import org.json.JSONObject
 
 class MainActivity : BaseFragment() {
 
@@ -202,5 +197,5 @@ class MainActivity : BaseFragment() {
     override val titleResId: Int
         get() = R.string.maxe_title_main
     override val layoutResId: Int
-        get() = R.layout.fragment_main
+        get() = R.layout.maxe_fragment_main
 }

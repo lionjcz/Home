@@ -1,20 +1,12 @@
 package com.company.maxe.Login.index_menu.sales.Button.StockTextSerching
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
-import android.widget.Button
 import androidx.fragment.app.Fragment
 //import com.android.volley.AuthFailureError
-import com.company.maxe.Login.MainActivity
 import com.jekma.maxe.R
-import java.lang.Exception
-import java.util.HashMap
 
 class TextSerching : Fragment()
 //    , View.OnClickListener, OnEditorActionListener
@@ -35,7 +27,7 @@ class TextSerching : Fragment()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 //        Log.wtf(TAG, "onCreateView")
-        val root: View = inflater.inflate(R.layout.textserching, container, false)
+        val root: View = inflater.inflate(R.layout.maxe_textserching, container, false)
 //        zoot = root
 //        editview = root.findViewById<EditText>(R.id.TextSerchingContent)
 //        editview.setOnEditorActionListener(this)

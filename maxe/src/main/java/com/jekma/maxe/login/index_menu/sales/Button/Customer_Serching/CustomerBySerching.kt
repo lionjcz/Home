@@ -1,25 +1,13 @@
 package com.company.maxe.Login.index_menu.sales.Button.Customer_Serching
 
-import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
-import android.widget.Filter
-import android.widget.Filterable
-import android.widget.ImageView
-import android.widget.SearchView
 import androidx.fragment.app.Fragment
 //import androidx.navigation.NavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 //import com.android.volley.AuthFailureError
-import com.company.maxe.Login.MainActivity
 import com.jekma.maxe.R
-import java.util.*
 
 class CustomerBySerching : Fragment() {
 //
@@ -37,7 +25,7 @@ class CustomerBySerching : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val root: View = inflater.inflate(R.layout.fragment_customer_by_serching, container, false)
+        val root: View = inflater.inflate(R.layout.maxe_fragment_customer_by_serching, container, false)
 //        val Personal = activity as MainActivity?
 //        val SALES: Array<String> = Personal.SALES()
 //        Log.wtf(TAG, "職務類別 = " + Personal.PERSONAL().get(3))

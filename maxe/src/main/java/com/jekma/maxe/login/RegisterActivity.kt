@@ -114,5 +114,5 @@ class RegisterActivity : BaseFragment() {
     override val titleResId: Int
         get() = R.string.maxe_title_register
     override val layoutResId: Int
-        get() = R.layout.fragment_register
+        get() = R.layout.maxe_fragment_register
 }

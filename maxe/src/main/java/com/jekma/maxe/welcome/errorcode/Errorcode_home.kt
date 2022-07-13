@@ -10,7 +10,7 @@ class Errorcode_home : BaseFragment() {
     override val titleResId: Int
         get() = R.string.maxe_title_errorcode
     override val layoutResId: Int
-        get() = R.layout.fragment_errorcode_home
+        get() = R.layout.maxe_fragment_errorcode_home
 //
 //
 //    private var TAG:String = "ErrorCode_Home"
