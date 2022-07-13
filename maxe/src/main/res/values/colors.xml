@@ -154,6 +154,32 @@
 
     <color name="specialBlue">#0290b6</color><!--黑色 -->
 
-    <!--    -->
+    <!--  special color  -->
+    <color name="repair_background">#FFEBCD</color>
+    <color name="presentation_background">#FFEBCD</color>
+    <color name="notification_background">#FFFFFF</color>
+    <color name="customer_background">#FFEBCD</color>
+    <color name="documents_law_background">#FFEBCD</color>
+    <color name="goods_background">#FFEBCD</color>
+    <color name="header_icon_background">#9CFF6C</color>
+    <color name="hr_background">#FFEBCD</color>
+    <color name="ic_maxe_logo_background">#FFFFFF</color>
+    <color name="introduction_background">#FFEBCD</color>    <color name="maxe_logo_background">#FFFFFF</color>
+    <color name="training_background">#FFEBCD</color>
+    <color name="text3_background">#FFEBCD</color>
+    <color name="hr_activitybtnimg_background">#FFEBCD</color>
+    <color name="hr_yeardatabtnimg_background">#FFEBCD</color>
+    <color name="announcements_background">#FFEBCD</color>
+
+
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/atma</item>
+    </array>
+    <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
+    <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
+    <item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item>
+    <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
+    <item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item>
+    <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
 
 </resources>
