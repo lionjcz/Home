@@ -19,20 +19,24 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.Exception
 
-
-//import com.android.volley.VolleyError
-//import com.company.maxe.Tools.Callback.IResult
-//import com.company.maxe.Tools.URL.VolleyBridge
-//import com.company.maxe.Tools.URL.VolleyService
-//import com.kymjs.rxvolley.RxVolley
-//import com.kymjs.rxvolley.client.HttpCallback
-//import com.kymjs.rxvolley.client.HttpParams
-//import com.kymjs.rxvolley.http.DefaultRetryPolicy
-//import com.kymjs.rxvolley.http.RetryPolicy
-
 @RequiresApi(Build.VERSION_CODES.Q)
 class AnnouncementViewModel(application: Application) : BaseViewModel(application),View.OnClickListener {
 
+    companion object{
+        fun fakeData(): String {
+            val job = JSONArray()
+            for (i in 0 .. 9 ){
+                val obj = JSONObject()
+                obj.put("Title","公告標題$i")
+                obj.put("Name","公告名稱$i")
+                obj.put("toWho","對誰發布$i")
+                obj.put("Create_at","2022/4/2$i")
+                obj.put("Content","在萬事益的公告$i")
+                job.put(obj)
+            }
+            return job.toString()
+        }
+    }
 
 
     private var mActionListener:OnActionListener? = null
@@ -49,31 +53,16 @@ class AnnouncementViewModel(application: Application) : BaseViewModel(applicatio
         mActionListener = listener
     }
 
+    /**
+     * Fake Data
+     */
     override fun create() {
         super.create()
         Log.d("Develop_","create")
 
-        val msg = "[{title:1,Name:2,toWho:jacky,Create_at:1},{title:1,Name:2,toWho:jacky,Create_at:1}]"
 
-        val obj = JSONObject()
-        obj.put("Title","1")
-        obj.put("Name","1")
-        obj.put("toWho","1")
-        obj.put("Create_at","1")
-        val job = JSONArray()
-        job.put(obj)
-        mActionListener?.createElements(job.toString())
+        mActionListener?.createElements(fakeData())
     }
-//
-//    /**
-//     * 解析回來的資料，並動態新增元件
-//     * @param result 回來的資料
-//     */
-//    private fun CreateElements(result: String) {
-//
-//
-//    }
-//
     /**
      * @param title 公告名稱
      * @param name 發佈人姓名
@@ -86,7 +75,6 @@ class AnnouncementViewModel(application: Application) : BaseViewModel(applicatio
      * Layout請參考實際畫面
      */
     fun DynamicallyBuildOneSetLayout(Count: Int, title: String, name: String, towho: String, create_at: String, maintable: TableLayout) {
-
         try {
 
             val tableRow = TableRow(getApplication())
@@ -144,9 +132,6 @@ class AnnouncementViewModel(application: Application) : BaseViewModel(applicatio
     }
 
 
-
-
-
     /**
      * 點選公告時，帶著索引值傳入到下一個Fragment裡面
      */
@@ -157,63 +142,5 @@ class AnnouncementViewModel(application: Application) : BaseViewModel(applicatio
         bundle.putInt("index", rowId)
         mActionListener?.onClick(bundle)
     }
-
-//    private val announcement=MutableLiveData<String>()
-//
-//    fun callInfo(userInput: String): LiveData<String> {
-//        RxVolleyConnext(announcement,userInput)
-//        return announcement
-//    }
-//    private fun RxVolleyConnext(announcement: MutableLiveData<String>, userInput: String) {
-//
-//        /**
-//         * 設定Api網址
-//         */
-//        val url = VolleyBridge().Announcements()
-//
-//
-//        /**
-//         * 設定參數
-//         */
-//        val params = HttpParams()
-//        //http header, optional parameters
-//        params.putHeaders("cookie", "your cookie")
-//        params.putHeaders("User-Agent", "rxvolley")
-//        //http header, optional parameters
-//        //request parameters
-//        params.put("search", userInput)
-//        //request parameters
-//
-//
-//        /**
-//         * Call Back 結果 並傳到liveData裡面
-//         */
-//        val callBack: HttpCallback = object : HttpCallback() {
-//            override fun onSuccess(Response: String) {
-//                Log.e(""Develop_"", "Suc and $Response")
-//                announcement.postValue(Response)
-//            }
-//
-//            override fun onFailure(errorNo: Int, strMsg: String) {
-//                Log.e(""Develop_"", "Fai = { $errorNo } and Msg = $strMsg")
-//            }
-//        }
-//
-//
-//        /**
-//         * 連線到Api
-//         */
-//        RxVolley.Builder()
-//                .url(url)
-//                .httpMethod(RxVolley.Method.POST) //default GET or POST/PUT/DELETE/HEAD/OPTIONS/TRACE/PATCH
-//                .cacheTime(6) //default: get 5min, post 0min
-//                .contentType(RxVolley.ContentType.FORM) //default FORM or JSON
-//                .params(params)
-//                .shouldCache(true) //default: get true, post false
-//                .callback(callBack)
-//                .encoding("UTF-8") //default
-//                .retryPolicy(DefaultRetryPolicy(20 * 1000, 2, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT))
-//                .doTask()
-//    }
 
 }

@@ -71,7 +71,7 @@
     <string name="maxe_title_announcement">公告</string>
     <string name="maxe_title_slideshow">SlideShow</string>
     <string name="maxe_title_main">Main葉面</string>
-    <string name="maxe_title_content">內容</string>
+    <string name="maxe_title_announce_content">公告內容</string>
     <string name="maxe_title_home">Home</string>
     <string name="maxe_title_errorcode">錯誤代碼</string>
     <string name="maxe_title_document">文件</string>

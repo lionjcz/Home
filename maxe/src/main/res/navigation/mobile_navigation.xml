@@ -112,7 +112,7 @@
 <!--    01公告=>公告內容-->
 <fragment
         android:id="@+id/nav_content_announcefinal"
-        android:name="com.jekma.maxe.login.index_menu.announcement.content_.Content"
+        android:name="com.jekma.maxe.login.index_menu.announcement.Content"
         android:label="string/Label_AnnouncementFinal"
         tools:layout="@layout/content_announcefinal" />
 

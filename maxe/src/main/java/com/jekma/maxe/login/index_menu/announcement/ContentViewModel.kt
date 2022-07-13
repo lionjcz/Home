@@ -1,4 +1,4 @@
-package com.jekma.maxe.login.index_menu.announcement.content_
+package com.jekma.maxe.login.index_menu.announcement
 
 import android.app.Application
 import android.os.Build
@@ -11,9 +11,9 @@ class ContentViewModel(application: Application) : BaseViewModel(application) {
 
     private val Result = MutableLiveData<String>()
 
-    fun callInfo(index: Int, announcements: String) {
+    fun callInfo(index: Int, announcements: String, fakeData: String) {
         RxVolleyConnext(Result,index)
-        mActionListener?.HttpCallback("Response",index = index)
+        mActionListener?.HttpCallback(fakeData,index = index)
     }
 
     private var mActionListener: OnActionListener? = null
@@ -22,7 +22,7 @@ class ContentViewModel(application: Application) : BaseViewModel(application) {
         fun HttpCallback(response: String, index: Int)
     }
 
-    fun setActionListener(listener:OnActionListener){
+    fun setActionListener(listener: OnActionListener){
         mActionListener = listener
     }
 
