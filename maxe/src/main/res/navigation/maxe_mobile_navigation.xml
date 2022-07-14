@@ -225,7 +225,7 @@
     </fragment>
     <fragment
         android:id="@+id/content2"
-        android:name="com.jekma.maxe.Tools.HRFinalContent.Content"
+        android:name="com.jekma.maxe.tools.HRFinalContent.Content"
         android:label="檔案內容"
         tools:layout="@layout/maxe_newemployeerfinal" />
     <fragment
@@ -281,9 +281,16 @@
         tools:layout="@layout/maxe_fragment_displayimagefragment" />
     <fragment
         android:id="@+id/loginActivity"
-        android:name="com.jekma.maxe.login.LoginActivity"
+        android:name="com.jekma.maxe.login.MaxeFragmentLogin"
         android:label="maxe_fragment_login"
-        tools:layout="@layout/maxe_fragment_login" />
+        tools:layout="@layout/maxe_fragment_login" >
+        <action
+            android:id="@+id/action_loginActivity_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_loginActivity_to_registerActivity2"
+            app:destination="@id/registerActivity2" />
+    </fragment>
     <fragment
         android:id="@+id/registerActivity2"
         android:name="com.jekma.maxe.login.RegisterActivity"

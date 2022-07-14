@@ -264,7 +264,7 @@ abstract class BaseFragment : Fragment(), Base.IOnBackPressed {
         }
     }
 
-    protected fun gotoNextNavPage(resId: Int, bundle: Bundle?) {
+    protected fun gotoNextNavPage(resId: Int, bundle: Bundle? = null) {
         findNavController().navigate(resId,bundle)
     }
 

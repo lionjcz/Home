@@ -1,14 +1,10 @@
-package com.jekma.maxe.Tools.URL
+package com.jekma.maxe.tools.URL
 
-import android.content.Context
-import android.util.Log
 //import com.android.volley.AuthFailureError
 //import com.android.volley.Response
 //import com.android.volley.toolbox.StringRequest
 //import com.android.volley.toolbox.Volley
 //import com.company.maxe.Tools.Callback.IResult
-import java.util.*
-import kotlin.jvm.Throws
 
 class VolleySingleTon() {
 //

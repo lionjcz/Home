@@ -6,6 +6,14 @@ import com.jekma.maxe.R
 //import com.android.volley.AuthFailureError
 
 class RegisterActivity : BaseFragment() {
+    override val isShowMainBar: Boolean
+        get() = true
+
+    override val titleResId: Int
+        get() = R.string.maxe_title_register
+    override val layoutResId: Int
+        get() = R.layout.maxe_fragment_register
+
     //
 //    private var mQueue: RequestQueue? = null
 //    private var Sub: Button? = null
@@ -111,8 +119,4 @@ class RegisterActivity : BaseFragment() {
 //    companion object {
 //        const val REQUEST_READ_PHONE_STATE = 8
 //    }
-    override val titleResId: Int
-        get() = R.string.maxe_title_register
-    override val layoutResId: Int
-        get() = R.layout.maxe_fragment_register
 }

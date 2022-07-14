@@ -1,133 +1,312 @@
 package com.jekma.maxe.login
 
-import com.jekma.baselibrary.BaseFragment
+import android.os.Build
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.*
+import androidx.annotation.RequiresApi
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.jekma.baselibrary.BaseBindingFragment
 import com.jekma.maxe.R
+import com.jekma.maxe.databinding.MaxeFragmentLoginBinding
+//import com.jekma.maxe.databinding.MaxeFragmentLoginBinding
+import com.jekma.maxe.model.room_database.User
 
-//import android.Manifest
-//import android.app.Activity
-//import android.app.AlertDialog
-//import android.app.ProgressDialog
-//import android.content.Context
-//import android.content.DialogInterface
-//import android.content.Intent
-//import android.content.pm.PackageManager
-//import android.os.Build
-//import android.os.Bundle
-//import android.provider.Settings
-//import android.telephony.TelephonyManager
-//import android.util.Log
-//import android.view.KeyEvent
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.inputmethod.EditorInfo
-//import android.widget.CheckBox
-//import android.widget.EditText
-//import android.widget.Toast
-//import androidx.appcompat.app.AppCompatActivity
-//import androidx.core.app.ActivityCompat
-//import androidx.core.content.ContextCompat
-//import androidx.databinding.DataBindingUtil
-//import androidx.lifecycle.ViewModelProvider
-//import com.android.volley.*
-//import com.android.volley.toolbox.StringRequest
-//import com.android.volley.toolbox.Volley
-//import com.company.maxe.Login.LoginActivityViewModel
-//import com.company.maxe.Login.MainActivity
-//import com.company.maxe.R
-//import com.company.maxe.Tools.URL.VolleyBridge
-//import com.company.maxe.databinding.ActivityLoginBinding
-//import com.jekma.maxe.welcome.Welcome
-//import com.google.android.material.textfield.TextInputEditText
-//import org.json.JSONArray
-//import org.json.JSONException
-//import java.io.*
-//import java.util.*
-//import kotlin.jvm.Throws
+/**
+ * 
+ */
+@RequiresApi(Build.VERSION_CODES.Q)
+class MaxeFragmentLogin : BaseBindingFragment<MaxeFragmentLoginBinding, MaxeLoginViewModel>(){
 
-class LoginActivity : BaseFragment(){
+    override var permissionOnViewListener: PermissionOnView? = null
 
-    override val isShowMainBar: Boolean
-        get() = true
-    override val titleResId: Int
-        get() = R.string.maxe_projects_maxe
-    override val layoutResId: Int
-        get() = R.layout.maxe_fragment_login
-    //
-//    /**
-//     * DataBinding
-//     */
-//    private lateinit var binding: ActivityLoginBinding
-//    private lateinit var e_eml: String
-//    private lateinit var e_pwd: String
-//    private lateinit var devices: Devices
+//    var myAdapter: MyAdapter? = null
+    var nowSelectedData: User? = null
+
+    override val isShowMainBar: Boolean get() = true
+    override val titleResId: Int get() = R.string.maxe_projects_maxe
+    override val layoutResId: Int get() = R.layout.maxe_fragment_login
+
+    var mActionListener = object : MaxeLoginViewModel.OnActionListener{
+        /**
+         * 按下登入
+         */
+        override fun onClickLogin() {
+            gotoNextNavPage(R.id.action_loginActivity_to_nav_home)
+        }
+
+        /**
+         * 按下忘記帳號密碼
+         */
+        override fun onClickForgot() {
+            gotoNextNavPage(R.id.action_loginActivity_to_registerActivity2)
+        }
+
+        /**
+         * 當使用者按下 記住我的信箱時
+         * 1.將 Email輸入框先清空
+         * 2.當試用者成功登入後，會記住登入成功後的信箱
+         */
+        override fun onClickRememberEmail() {
+//            RememberEmail(binding.root)
+        }
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        test(mViewBinding.root)
+        mViewModel.setActionLisrenr(mActionListener)
+        mViewModel.create()
+        mViewBinding.vm = mViewModel
+
+        // Recyclerview
+        val adapter = ListAdapter()
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerview)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        // UserViewModel
+        mViewModel.readAllData.observe(viewLifecycleOwner) { user ->
+            adapter.setData(user)
+        }
+
+
+    }
+
+
+    private fun test(view: View) {
+        mViewBinding.addBtn.setOnClickListener {
+            val user = User(0, "firstName", "lastName", 30)
+            mViewModel.addUser(user)
+        }
+
+        mViewBinding.deleteBtn.setOnClickListener {
+
+            mViewModel.deleteUser(id=mViewModel.readAllData.value!!.size)
+        }
+
+
+
+
+//        val btCreate = view.findViewById<Button>(R.id.button_Create)
+//        val btModify = view.findViewById<Button>(R.id.button_Modify)
+//        val btClear = view.findViewById<Button>(R.id.button_Clear)
+//        val edName = view.findViewById<EditText>(R.id.editText_Name)
+//        val edPhone = view.findViewById<EditText>(R.id.editText_Phone)
+//        val edHobby = view.findViewById<EditText>(R.id.editText_Hobby)
+//        val edElseInfo = view.findViewById<EditText>(R.id.editText_else)
+//        val edAge = view.findViewById<EditText>(R.id.editText_age)
+//        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+//        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+//        recyclerView.addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)) //設置分隔線
+////        setRecyclerFunction(recyclerView) //設置RecyclerView左滑刪除
+//        /**======================================================================================= */
+//        /**設置修改資料的事件 */
+//        btModify.setOnClickListener { v: View? ->
+////            Thread(Runnable {
+////                if (nowSelectedData == null) {
+////                }else{
+////                    val name = edName.text.toString()
+////                    val phone = edPhone.text.toString()
+////                    val hobby = edHobby.text.toString()
+////                    val elseInfo = edElseInfo.text.toString()
+////                    val age = edAge.text.toString().toInt() /*遷移後新增*/
+////
+////                    val data = User(nowSelectedData!!.getId(), name, phone, hobby, elseInfo, age) /*遷移後新增*/
+////                    UserDataBase.getInstance(requireContext())?.dataUao?.updateData(data)
+////                    requireActivity().runOnUiThread {
+////                        edName.setText("")
+////                        edPhone.setText("")
+////                        edHobby.setText("")
+////                        edElseInfo.setText("")
+////                        edAge.setText("") /*遷移後新增*/
+////                        nowSelectedData = null
+////                        myAdapter!!.refreshView()
+////                        Toast.makeText(requireContext(), "已更新資訊！", Toast.LENGTH_LONG).show()
+////                    }
+////                }
+////            }).start()
+//        }
+//        /**======================================================================================= */
+//        /**清空資料 */
+//        btClear.setOnClickListener { v: View? ->
+//            edName.setText("")
+//            edPhone.setText("")
+//            edHobby.setText("")
+//            edElseInfo.setText("")
+//            edAge.setText("") /*遷移後新增*/
+//            nowSelectedData = null
+//        }
+//        /**======================================================================================= */
+//        /**新增資料 */
+//        btCreate.setOnClickListener { v: View? ->
+//            mViewModel.addUser(User(0,"firstName","LastName",30))
+////            Thread(Runnable {
+////                val name = edName.text.toString()
+////                val phone = edPhone.text.toString()
+////                val hobby = edHobby.text.toString()
+////                val elseInfo = edElseInfo.text.toString()
+////                val age = edAge.text.toString().toInt() /*遷移後新增*/
+////                if (name.length == 0) {
+////
+////                }else{
+////                    //如果名字欄沒填入任何東西，則不執行下面的程序
+////                    val data = User(name, phone, hobby, elseInfo, age /*遷移後新增*/)
+////                    UserDataBase.getInstance(requireContext())?.dataUao?.insertData(data)
+////                    requireActivity().runOnUiThread {
+////                        myAdapter!!.refreshView()
+////                        edName.setText("")
+////                        edPhone.setText("")
+////                        edHobby.setText("")
+////                        edElseInfo.setText("")
+////                        edAge.setText("") /*遷移後新增*/
+////                    }
+////                }
+////
+////            }).start()
+//        }
+//        /**======================================================================================= */
+//        /**初始化RecyclerView */
+////        Thread {
+////            val data: List<User> = UserDataBase.getInstance(requireContext())?.dataUao?.displayAll() as List<User>
+////            myAdapter = MyAdapter(requireActivity(), data)
+////            requireActivity().runOnUiThread {
+////                recyclerView.adapter = myAdapter
+////                /**=============================================================================== */
+////                /**=============================================================================== */
+////                myAdapter!!.setOnItemClickListener(object : MyAdapter.OnItemClickListener {
+////                    //原本的樣貌
+////                    override fun onItemClick(myData: User?) {
+////                        nowSelectedData = myData
+////                        edName.setText(myData?.getName())
+////                        edPhone.setText(myData?.getPhone())
+////                        edHobby.setText(myData?.getHobby())
+////                        edElseInfo.setText(myData?.getElseInfo())
+////                        edAge.setText(myData?.getAge().toString()) /*遷移後新增*/
+////                    }
+////                })
+////                /**=============================================================================== */
+////                /**取得被選中的資料，並顯示於畫面 */
+////                /**=============================================================================== */
+////                /**取得被選中的資料，並顯示於畫面 */
+//////                myAdapter!!.setOnItemClickListener(MyAdapter.OnItemClickListener { myData: MyData ->  //匿名函式(原貌在上方)
+//////
+//////                })
+////            }
+////        }.start()
+//        /**======================================================================================= */
+    }
+
+//    class MyAdapter(private val activity: Activity, private var myData: List<User>) :
+//        RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+//        private var onItemClickListener: OnItemClickListener? = null
 //
-//    /**
-//     * 建立viewModel的變數
-//     */
-//    private lateinit var LAVM: LoginActivityViewModel
+//        /**建立對外接口 */
+//        fun setOnItemClickListener(onItemClickListener: OnItemClickListener?) {
+//            this.onItemClickListener = onItemClickListener
+//        }
 //
+//        inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+//            var tvTitle: TextView
+//            var view: View
 //
-//    private val TAG = "LoginActivity"
-//    private val session = 1
-//    private var IMeI = "initial"
-//    private val REQUEST_PERMISSION_PHONE_STATE:Int = 1
-//    private var dialog: ProgressDialog? = null
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = DataBindingUtil.setContentView(this,R.layout.activity_login)
-//        LAVM = ViewModelProvider(this).get(LoginActivityViewModel::class.java)
+//            init {
+//                tvTitle = itemView.findViewById(android.R.id.text1)
+//                view = itemView
+//            }
+//        }
 //
+//        /**更新資料 */
+//        fun refreshView() {
+//            Thread {
+//                val data: List<User> = UserDataBase.getInstance(activity)?.dataUao?.displayAll() as List<User>
+//                myData = data
+//                activity.runOnUiThread { notifyDataSetChanged() }
+//            }.start()
+//        }
 //
-//        RememberEmail()
-//        init()
-//        val mTelManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-//        devices = Devices(TAG,this,REQUEST_PERMISSION_PHONE_STATE,mTelManager)
-//        IMeI = devices.imei
-//        println(devices.imei)
-//        Log.wtf(TAG, "imei" + devices!!.imei)
-//        dialog = ProgressDialog(this)
+//        /**刪除資料 */
+//        fun deleteData(position: Int) {
+//            Thread {
+//                UserDataBase.getInstance(activity)?.dataUao?.deleteData(myData[position].getId())
+//                activity.runOnUiThread {
+//                    notifyItemRemoved(position)
+//                    refreshView()
+//                }
+//            }.start()
+//        }
+//
+//        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+//            val view = LayoutInflater.from(parent.context)
+//                .inflate(android.R.layout.simple_list_item_1, null)
+//            return ViewHolder(view)
+//        }
+//
+//        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+//            holder.tvTitle.text = myData[position].getName()
+//            holder.view.setOnClickListener { v: View? -> onItemClickListener!!.onItemClick(myData[position]) }
+//        }
+//
+//        override fun getItemCount(): Int {
+//            return myData.size
+//        }
+//
+//        /**建立對外接口 */
+//        interface OnItemClickListener {
+//            fun onItemClick(myData: User?)
+//        }
 //    }
+
+    /**設置RecyclerView的左滑刪除行為 */
+//    private fun setRecyclerFunction(recyclerView: RecyclerView) {
+//        val helper = ItemTouchHelper(object : ItemTouchHelper.Callback() {
+//            //設置RecyclerView手勢功能
+//            override fun getMovementFlags(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder): Int {
+//                return makeMovementFlags(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT)
+//            }
 //
+//            override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
+//                return false
+//            }
 //
-//    /**
-//     * 初始化元件，設定事件，設定UI
-//     */
-//    private fun init() {
-//
+//            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+//                val position = viewHolder.adapterPosition
+//                when (direction) {
+//                    ItemTouchHelper.LEFT, ItemTouchHelper.RIGHT -> myAdapter!!.deleteData(position)
+//                }
+//            }
+//        })
+//        helper.attachToRecyclerView(recyclerView)
+//    }
+
+
+
+    /**
+     * 初始化元件，設定事件，設定UI
+     */
+    private fun init() {
+
 //        /**
 //         * 當使用者輸入帳號密碼後按下虛擬鍵盤的確認，自訂連線到API
 //         */
 //        binding.LoginPassword.setOnEditorActionListener { v, actionId, event ->
 //            when (actionId) {
-//                EditorInfo.IME_ACTION_SEND -> RxVolleyConnext(IMeI,VolleyBridge().Login_Url())
+//                EditorInfo.IME_ACTION_SEND -> RxVolleyConnext(IMeI, VolleyBridge().Login_Url())
 //            }
 //            false
 //        }
+
+    }
 //
-//
-//        /**
-//         * 當使用者按下 記住我的信箱時
-//         * 1.將 Email輸入框先清空
-//         * 2.當試用者成功登入後，會記住登入成功後的信箱
-//         */
-//        binding.Remember.setOnClickListener {
-//            RememberEmail()
-//        }
-//
-//
-//
-//        /**
-//         * 隱藏ActionBar
-//         */
-//        supportActionBar!!.hide() //hide action bar
-//
-//
-//    }
-//
-//    /**
-//     * 當適用者按下忘記密碼，會出現Dialog視窗並要求使用者輸入，姓名，信箱
-//     *
-//     */
+    /**
+     * 當適用者按下忘記密碼，會出現Dialog視窗並要求使用者輸入，姓名，信箱
+     *
+     */
 //    private var ctx: LoginActivity? = this
 //    private lateinit var mQueue: RequestQueue
 //    fun forgot(view: View?) {
@@ -144,7 +323,7 @@ class LoginActivity : BaseFragment(){
 //                val for_name = f_name.text.toString()
 //                val f_email = newPlanDialog.findViewById<View>(R.id.for_email) as EditText
 //                val for_email = f_email.text.toString()
-//                LAVM.CallForgotInfo(for_name,for_email,"Opened",VolleyBridge().forgot()).observe(this@LoginActivity, androidx.lifecycle.Observer {
+//                LAVM.CallForgotInfo(for_name,for_email,"Opened",VolleyBridge().forgot()).observe(requireContext(), androidx.lifecycle.Observer {
 //                    Log.i(TAG,"The response is  ${it} at observe mode in Class:$TAG")
 //                    val jsonArray = JSONArray(it)
 //                    val sessionSeter = jsonArray.getString(0)
@@ -241,16 +420,14 @@ class LoginActivity : BaseFragment(){
 ////        mQueue.add(getRequest)
 //    }
 //
-//    /**
-//     * 當使用者輸入帳號密碼後按下登入時，自動連線至Api
-//     */
+
 //    fun Login(view: View?){
-//        dialog!!.show()
-//        RxVolleyConnext(IMeI,VolleyBridge().Login_Url())
+////        dialog!!.show()
+////        RxVolleyConnext(IMeI,VolleyBridge().Login_Url())
 //    }
-//
-//    private fun RxVolleyConnext(iMeI: String, loginUrl: String) {
-//
+
+    private fun RxVolleyConnext(iMeI: String, loginUrl: String) {
+
 //        LAVM.callInfo(
 //                binding.LoginEmail.text.toString(),
 //                binding.LoginPassword.text.toString(),
@@ -260,7 +437,7 @@ class LoginActivity : BaseFragment(){
 //            Parsing(it)
 //
 //        })
-//    }
+    }
 //    private fun Parsing(response: String) {
 //        try {
 //            val arry = JSONArray(response)
@@ -272,10 +449,10 @@ class LoginActivity : BaseFragment(){
 //            } //First Login
 //            else if (Login_result == "First_login") {
 //                val e_name = arry.getJSONObject(0).getString("Android_NAME")
-//                val abs = FirstTimes(e_name, e_pwd, this@LoginActivity, IMeI)
+//                val abs = FirstTimes(e_name, e_pwd, this , IMeI)
 //            } else {
 //                dialog!!.hide()
-//                Toast.makeText(this@LoginActivity, Login_result, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(requireContext(), Login_result, Toast.LENGTH_SHORT).show()
 //            }
 //        } catch (e: JSONException) {
 //            e.printStackTrace()
@@ -287,7 +464,7 @@ class LoginActivity : BaseFragment(){
 //        BundleData(s, arrayCount)
 //    }
 //    private fun BundleData(s: String, arrayCount: Int) {
-//        Toast.makeText(this@LoginActivity, "登入成功", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(requireContext(), "登入成功", Toast.LENGTH_SHORT).show()
 //        val thispage = Intent(this, MainActivity::class.java)
 //        val bundle = Bundle()
 //        bundle.putInt("ArrayCount", arrayCount)
@@ -296,19 +473,17 @@ class LoginActivity : BaseFragment(){
 //        startActivityForResult(thispage, session)
 //        finish()
 //    }
-//    /**
-//     * 記住信箱
-//     */
-//    private fun RememberEmail() {
-//        val userid = getSharedPreferences("test", Context.MODE_PRIVATE)
-//                .getString("USER", "")
-//        val RememberStatusString = getSharedPreferences("test", Context.MODE_PRIVATE)
-//                .getString("Remember", "")
-//        //        System.out.println("RememberStatusString = "+RememberStatusString);
+    /**
+     * 記住信箱
+     */
+//    private fun RememberEmail(root: View) {
+//        val userid = "fakeUserId"
+//        val RememberStatusString = "fakeRememberStatusString"
 //        val RememberStatus = java.lang.Boolean.parseBoolean(RememberStatusString)
-//        val Reme = findViewById<CheckBox>(R.id.Remember)
+//        val Reme = root.findViewById<CheckBox>(R.id.Remember)
 //        if (RememberStatus) {
-//            val default_email = findViewById<View>(R.id.Login_Email) as TextInputEditText
+//            val default_email = root.findViewById<TextInputEditText>(R.id.Login_Email)
+//            default_email.setText(userid)
 //            default_email.setText(userid)
 //            Reme.isChecked = true
 //        } else {
@@ -336,12 +511,13 @@ class LoginActivity : BaseFragment(){
 //        val pref = getSharedPreferences("test", Context.MODE_PRIVATE)
 //        pref.edit().putString("USER", user).commit()
 //    }
+
 //    /**
 //     * 當使用者按下返回鍵後，回到首頁
 //     */
 //    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
 //        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            val homeIntent = Intent(this@LoginActivity, Welcome::class.java)
+//            val homeIntent = Intent(requireContext(), Welcome::class.java)
 //            startActivity(homeIntent)
 //            finish()
 //        }
@@ -351,7 +527,7 @@ class LoginActivity : BaseFragment(){
 //
 //internal class FirstTimes(e_name: String, e_pwd: String, loginActivity: LoginActivity, IMeI: String) {
 //    //    private final LoginActivity loginActivity1;
-//    private val activity: Activity
+//    private val activity: LoginActivity
 //    private val currentNAME: String
 //    var currentPWD: String
 //    private var IMei = ""
@@ -359,39 +535,42 @@ class LoginActivity : BaseFragment(){
 //        volleyPost(test)
 //    }
 //
+//    /**
+//     * API連線 - no need
+//     */
 //    private fun volleyPost(currentPWD: String) {
-//        val changePWD = VolleyBridge()
-//        val mQueue = Volley.newRequestQueue(activity)
-//        // 記得put進去，不然資料不max會帶過去哦
-//        val getRequest: StringRequest = object : StringRequest(Method.POST, changePWD.changePWD(),
-//                Response.Listener { s ->
-//                    Log.wtf("LoginActivity", s)
-//                    try {
-//                        val array = JSONArray(s)
-//                        val result = array.getString(0)
-//                        if (result == "NeedChange") {
-//                            val intent = Intent(activity, RegisterActivity::class.java)
-//                            val bundle = Bundle()
-//                            bundle.putString("username", currentNAME)
-//                            bundle.putString("IMEI", IMei)
-//                            intent.putExtras(bundle) // 記得put進去，不然資料不max會帶過去哦
-//                            activity.startActivity(intent)
-//                            activity.finish()
-//                        } else if (result == "DontNeedChange") {
-//                        }
-//                    } catch (e: JSONException) {
-//                        e.printStackTrace()
-//                    }
-//                },
-//                Response.ErrorListener { }) {
-//            @Throws(AuthFailureError::class)
-//            override fun getParams(): Map<String, String> {
-//                val hashMap = HashMap<String, String>()
-//                hashMap["currentPWD"] = currentPWD
-//                return hashMap
-//            }
-//        }
-//        mQueue.add(getRequest)
+////        val changePWD = VolleyBridge()
+////        val mQueue = Volley.newRequestQueue(activity)
+////        // 記得put進去，不然資料不max會帶過去哦
+////        val getRequest: StringRequest = object : StringRequest(Method.POST, changePWD.changePWD(),
+////                Response.Listener { s ->
+////                    Log.wtf("LoginActivity", s)
+////                    try {
+////                        val array = JSONArray(s)
+////                        val result = array.getString(0)
+////                        if (result == "NeedChange") {
+////                            val intent = Intent(activity, RegisterActivity::class.java)
+////                            val bundle = Bundle()
+////                            bundle.putString("username", currentNAME)
+////                            bundle.putString("IMEI", IMei)
+////                            intent.putExtras(bundle) // 記得put進去，不然資料不max會帶過去哦
+////                            activity.startActivity(intent)
+////                            activity.finish()
+////                        } else if (result == "DontNeedChange") {
+////                        }
+////                    } catch (e: JSONException) {
+////                        e.printStackTrace()
+////                    }
+////                },
+////                Response.ErrorListener { }) {
+////            @Throws(AuthFailureError::class)
+////            override fun getParams(): Map<String, String> {
+////                val hashMap = HashMap<String, String>()
+////                hashMap["currentPWD"] = currentPWD
+////                return hashMap
+////            }
+////        }
+////        mQueue.add(getRequest)
 //    }
 //    init {
 //        IMei = IMeI
@@ -603,4 +782,32 @@ class LoginActivity : BaseFragment(){
 //        DEVICEIMEI()
 //        DEVICEINFO(NavigationTAG) //DEVICEINFO--1
 //    }
+}
+
+class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+
+    private var userList = emptyList<User>()
+
+    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {}
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false))
+    }
+
+    override fun getItemCount(): Int {
+        return userList.size
+    }
+
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val currentItem = userList[position]
+        holder.itemView.findViewById<TextView>(R.id.id_txt).text = currentItem.id.toString()
+        holder.itemView.findViewById<TextView>(R.id.firstName_txt).text = currentItem.firstName
+        holder.itemView.findViewById<TextView>(R.id.lastName_txt).text = currentItem.lastName
+        holder.itemView.findViewById<TextView>(R.id.age_txt).text = currentItem.age.toString()
+    }
+
+    fun setData(user: List<User>){
+        this.userList = user
+        notifyDataSetChanged()
+    }
 }

@@ -1,4 +1,4 @@
-package com.jekma.maxe.Tools.HRFinalContent
+package com.jekma.maxe.tools.HRFinalContent
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,15 +1,87 @@
-package com.company.maxe.Login
+package com.jekma.maxe.login
 
-import android.os.Environment
-import android.util.Log
+import android.app.Application
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-//import com.company.maxe.Tools.URL.VolleyBridge
-//import com.kymjs.rxvolley.RxVolley
-//import com.kymjs.rxvolley.client.HttpCallback
-//import com.kymjs.rxvolley.client.HttpParams
-class LoginActivityViewModel: ViewModel() {
+import androidx.lifecycle.viewModelScope
+//import androidx.lifecycle.viewModelScope
+import com.jekma.baselibrary.BaseViewModel
+import com.jekma.maxe.model.room_database.User
+import com.jekma.maxe.model.room_database.UserDatabase
+import com.jekma.maxe.model.room_database.UserRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+@RequiresApi(Build.VERSION_CODES.Q)
+class MaxeLoginViewModel(application: Application) : BaseViewModel(application) {
+
+    lateinit var readAllData:LiveData<List<User>>
+    private lateinit var repository:UserRepository
+
+    private var mActionListener:OnActionListener? = null
+
+
+    val mUiListener:OnUiListener = object : OnUiListener{
+        override fun onClickLogin() {
+            mActionListener?.onClickLogin()
+        }
+
+        override fun onClickForgot() {
+            mActionListener?.onClickForgot()
+        }
+
+        override fun onClickRememberEmail() {
+            mActionListener?.onClickRememberEmail()
+        }
+
+        /**
+         * 輸入密碼時監聽
+         */
+        override fun onPasswordTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+//            when (actionId) {
+//                EditorInfo.IME_ACTION_SEND -> RxVolleyConnext(IMeI, VolleyBridge().Login_Url())
+//            }
+        }
+    }
+
+    fun setActionLisrenr(mActionListener: OnActionListener) {
+        this.mActionListener = mActionListener
+    }
+
+    interface OnActionListener {
+        fun onClickLogin()
+        fun onClickForgot()
+        fun onClickRememberEmail()
+
+    }
+
+    interface OnUiListener {
+        fun onClickLogin()
+        fun onClickForgot()
+        fun onClickRememberEmail()
+        fun onPasswordTextChanged(s: CharSequence, start: Int, before: Int, count: Int)
+    }
+
+    override fun create() {
+        super.create()
+        val userDao = UserDatabase.getDatabase(getApplication<Application?>().applicationContext).userDao()
+        repository = UserRepository(userDao)
+        readAllData = repository.readAllData
+    }
+
+    fun addUser(user: User){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.addUser(user)
+        }
+    }
+
+    fun deleteUser(id: Int) {
+        viewModelScope.launch (Dispatchers.IO){
+            repository.deleteUser(id)
+        }
+    }
+
 //    private var TAG:String = "LoginActivityViewModel"
 ////
 //    private var ResponseinVM = MutableLiveData<String>()
