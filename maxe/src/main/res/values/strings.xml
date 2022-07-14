@@ -68,6 +68,13 @@
     <string name="maxe_nav_header_title">Android Studio</string>
     <string name="maxe_nav_header_subtitle">android.studio@android.com</string>
     <string name="maxe_menu_announcement">01公告</string>
+    <string name="maxe_welcome_login">登入</string>
+    <string name="maxe_welcome_alert">注意事項</string>
+    <string name="maxe_welcome_error_code">故障代碼</string>
+    <string name="maxe_welcome_news">最新消息</string>
+    <string name="maxe_errorCodeHome_hint">此輸入代碼 例:Ex1</string>
+    <string name="maxe_errorCodeHome_Search">查詢錯誤代碼</string>
+    <string name="maxe_errorCodeHome_clear">清空</string>
 
 
 </resources>

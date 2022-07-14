@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/loginActivity">
+    app:startDestination="@id/welcome">
 
 <!--    首頁-->
     <fragment
@@ -296,6 +296,22 @@
         android:name="com.jekma.maxe.login.RegisterActivity"
         android:label="maxe_fragment_register"
         tools:layout="@layout/maxe_fragment_register" />
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.jekma.maxe.Welcome"
+        android:label="maxe_fragment_welcome"
+        tools:layout="@layout/maxe_fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_loginActivity"
+            app:destination="@id/loginActivity" />
+        <action
+            android:id="@+id/action_welcome_to_errorcode_home"
+            app:destination="@id/errorcode_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorcode_home"
+        android:name="com.jekma.maxe.ErrorCodeHome"
+        android:label="Errorcode_home" />
 
     <!--    Sales menu BySerchingResult-->
 
