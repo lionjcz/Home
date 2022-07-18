@@ -6,7 +6,7 @@
     <data class="ContentAnnounceFinalBinding">
         <variable
             name="vm"
-            type="com.jekma.maxe.login.index_menu.announcement.ContentViewModel" />
+            type="com.jekma.maxe.login.announcement.ContentViewModel" />
     </data>
     <ScrollView android:orientation="vertical"
         android:layout_width="match_parent"

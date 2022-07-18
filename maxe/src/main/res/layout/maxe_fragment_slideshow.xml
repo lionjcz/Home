@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:background="@color/maxe_wheat"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".login.index_menu.hr.SlideshowFragment"
+    tools:context=".login.hr.SlideshowFragment"
     android:orientation="vertical">
     <!--FunctionBox-->
     <LinearLayout

@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".login.index_menu.announcement.AnnouncementFragment">
+    tools:context=".login.announcement.AnnouncementFragment">
     <data class="MaxeFragmentAnnounceBinding">
         <variable
             name="vm"
-            type="com.jekma.maxe.login.index_menu.announcement.AnnouncementViewModel" />
+            type="com.jekma.maxe.login.announcement.AnnouncementViewModel" />
     </data>
     <ScrollView
         android:layout_width="match_parent"

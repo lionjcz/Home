@@ -8,7 +8,7 @@
 <!--    首頁-->
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.jekma.maxe.login.index_menu.home.HomeFragment"
+        android:name="com.jekma.maxe.login.HomeFragment"
         android:label="@string/maxe_menu_home"
         tools:layout="@layout/maxe_fragment_home" >
         <action
@@ -30,7 +30,7 @@
 <!--    公告-->
     <fragment
         android:id="@+id/nav_announcement"
-        android:name="com.jekma.maxe.login.index_menu.announcement.AnnouncementFragment"
+        android:name="com.jekma.maxe.login.announcement.AnnouncementFragment"
         android:label="@string/maxe_menu_announcement"
         tools:layout="@layout/maxe_fragment_announce" >
         <action
@@ -40,7 +40,7 @@
 <!--    人資專區-->
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.jekma.maxe.login.index_menu.hr.SlideshowFragment"
+        android:name="com.jekma.maxe.login.hr.SlideshowFragment"
         android:label="@string/maxe_home_item_slideshow"
         tools:layout="@layout/maxe_fragment_slideshow" >
         <action
@@ -62,7 +62,7 @@
 <!--    規章表單-->
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.jekma.maxe.login.index_menu.documents_laws.ToolsFragment"
+        android:name="com.jekma.maxe.login.documentsLaws.ToolsFragment"
         android:label="@string/maxe_home_item_tools"
         tools:layout="@layout/maxe_fragment_tools" >
         <action
@@ -75,7 +75,7 @@
 <!--    服務專區-->
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.jekma.maxe.login.index_menu.services.ShareFragment"
+        android:name="com.jekma.maxe.login.services.ShareFragment"
         android:label="@string/maxe_home_item_share"
         tools:layout="@layout/maxe_fragment_share" >
         <action
@@ -88,7 +88,7 @@
 <!--    業務專區-->
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.jekma.maxe.login.index_menu.sales.SendFragment"
+        android:name="com.jekma.maxe.login.sales.SendFragment"
         android:label="@string/maxe_home_item_send"
         tools:layout="@layout/maxe_fragment_send" >
         <action
@@ -112,14 +112,14 @@
 <!--    01公告=>公告內容-->
 <fragment
         android:id="@+id/nav_content_announcefinal"
-        android:name="com.jekma.maxe.login.index_menu.announcement.Content"
+        android:name="com.jekma.maxe.login.announcement.Content"
         android:label="@string/maxe_Label_AnnouncementFinal"
         tools:layout="@layout/maxe_content_announcefinal" />
 
 <!--    業務專區=>經銷商業績-->
 <fragment
         android:id="@+id/customer"
-        android:name="com.jekma.maxe.login.index_menu.sales.Button.Customer_ALL.Customer"
+        android:name="com.jekma.maxe.login.sales.Customer"
         android:label="@string/maxe_label_customer"
         tools:layout="@layout/maxe_customer" >
         <action
@@ -129,38 +129,38 @@
     <!--    業務專區=>經銷商業績=>業績內容-->
         <fragment
         android:id="@+id/fragment_customer_sell"
-        android:name="com.company.maxe.Login.index_menu.sales.Button.Customer_ALL.fragment_customer_sell"
+        android:name="com.jekma.maxe.login.sales.fragment_customer_sell"
         android:label="@string/maxe_Label_fragment_customer_sell"
         tools:layout="@layout/maxe_fragment_customer_sell" />
     <!--    業務專區=>型錄搜尋-->
         <fragment
         android:id="@+id/catalog"
-        android:name="com.company.maxe.Login.index_menu.sales.Button.StockCatalogSerching.Catalog"
+        android:name="com.jekma.maxe.login.sales.Catalog"
         android:label="@string/maxe_Label_catalog"
         tools:layout="@layout/maxe_catalog" />
     <!--    業務專區=>型號搜尋-->
         <fragment
             android:id="@+id/textSerching"
-            android:name="com.company.maxe.Login.index_menu.sales.Button.StockTextSerching.TextSerching"
+            android:name="com.jekma.maxe.login.sales.TextSerching"
             android:label="@string/maxe_Label_textSerching"
             tools:layout="@layout/maxe_textserching" />
     <!--    業務專區=>主管專區-->
         <fragment
             android:id="@+id/manager"
-            android:name="com.jekma.maxe.login.index_menu.sales.Manager.Manager"
+            android:name="com.jekma.maxe.login.sales.Manager"
             android:label="@string/maxe_Label_manager"
             tools:layout="@layout/maxe_manager" />
 
 <!--    服務專區=>錯誤代碼-->
     <fragment
         android:id="@+id/ser_ErrCod"
-        android:name="com.company.maxe.Login.index_menu.services.Button.Ser_ErrCod"
+        android:name="com.jekma.maxe.login.services.Ser_ErrCod"
         android:label="@string/maxe_Label_ser_ErrCod"
         tools:layout="@layout/maxe_fragment_ser_errcod" />
 <!--    服務專區=>查詢料號庫存-->
     <fragment
         android:id="@+id/ser_stock"
-        android:name="com.company.maxe.Login.index_menu.services.Button.Ser_stock"
+        android:name="com.jekma.maxe.login.services.Ser_stock"
         android:label="@string/maxe_Label_ser_stock"
         tools:layout="@layout/maxe_fragment_ser_stock" />
 
@@ -168,7 +168,7 @@
 <!--    人資專區=>新人介紹-->
     <fragment
         android:id="@+id/introduce"
-        android:name="com.company.maxe.Login.index_menu.hr.Introduce.Introduce"
+        android:name="com.jekma.maxe.login.hr.introduce.Introduce"
         android:label="@string/maxe_Label_introduce"
         tools:layout="@layout/maxe_introduce" >
         <action
@@ -178,7 +178,7 @@
 <!--    人資專區=>新人訓練-->
     <fragment
         android:id="@+id/newTraining"
-        android:name="com.company.maxe.Login.index_menu.hr.NewTraining.NewTraining"
+        android:name="com.jekma.maxe.login.hr.newTraining.NewTraining"
         android:label="@string/maxe_Label_newTraining"
         tools:layout="@layout/maxe_newtraining" >
         <action
@@ -188,7 +188,7 @@
 <!--    人資專區=>在職訓練-->
     <fragment
         android:id="@+id/training"
-        android:name="com.company.maxe.Login.index_menu.hr.Training.Training"
+        android:name="com.jekma.maxe.login.hr.training.Training"
         android:label="@string/maxe_Label_training"
         tools:layout="@layout/maxe_training" >
         <action
@@ -205,7 +205,7 @@
 <!--    規章表單=>規章-->
     <fragment
         android:id="@+id/laws"
-        android:name="com.company.maxe.Login.index_menu.documents_laws.Laws.Laws"
+        android:name="com.jekma.maxe.login.documentsLaws.laws.Laws"
         android:label="@string/maxe_Label_laws"
         tools:layout="@layout/maxe_laws_fragment" >
         <action
@@ -216,7 +216,7 @@
 
     <fragment
         android:id="@+id/documents"
-        android:name="com.jekma.maxe.login.index_menu.documents_laws.Documents.Documents"
+        android:name="com.jekma.maxe.login.documentsLaws.documents.Documents"
         android:label="@string/maxe_Label_documents"
         tools:layout="@layout/maxe_documents_fragment" >
         <action
@@ -225,12 +225,12 @@
     </fragment>
     <fragment
         android:id="@+id/content2"
-        android:name="com.jekma.maxe.tools.HRFinalContent.Content"
+        android:name="com.jekma.maxe.tools.Content"
         android:label="檔案內容"
         tools:layout="@layout/maxe_newemployeerfinal" />
     <fragment
         android:id="@+id/content4"
-        android:name="com.company.maxe.Tools.HRFinalContent.Content_BlockDownload"
+        android:name="com.jekma.maxe.tools.Content_BlockDownload"
         android:label="內容"
         tools:layout="@layout/maxe_content_training" />
 
@@ -239,7 +239,7 @@
 <!--    Sales menu CustomerBySerching-->
     <fragment
         android:id="@+id/Sales_CustomerBySerching"
-        android:name="com.company.maxe.Login.index_menu.sales.Button.Customer_Serching.CustomerBySerching"
+        android:name="com.jekma.maxe.login.sales.CustomerBySerching"
         android:label="查詢經銷商"
         tools:layout="@layout/maxe_fragment_customer_by_serching"
         >
@@ -252,13 +252,13 @@
 <!--    Sales menu BySerchingResult-->
     <fragment
         android:id="@+id/Sales_BySerchingResult"
-        android:name="com.company.maxe.Login.index_menu.sales.Button.Customer_Serching.BySerchingResult"
+        android:name="com.jekma.maxe.login.sales.BySerchingResult"
         android:label="經銷商業績"
         tools:layout="@layout/maxe_fragment_byserchingresult"
         />
     <fragment
         android:id="@+id/activityimg"
-        android:name="com.company.maxe.Login.index_menu.hr.ActivityImg.activityimg"
+        android:name="com.jekma.maxe.login.hr.activityImg.activityimg"
         android:label="@string/maxe_HR_ActivityImgs"
         tools:layout="@layout/maxe_activityimg_fragment">
         <action
@@ -267,7 +267,7 @@
     </fragment>
     <fragment
         android:id="@+id/yeardata"
-        android:name="com.company.maxe.Login.index_menu.hr.YearData.yeardata"
+        android:name="com.jekma.maxe.login.hr.yearData.yeardata"
         android:label="@string/maxe_HR_YearData"
         tools:layout="@layout/maxe_yeardata_fragment">
         <action
@@ -276,12 +276,12 @@
     </fragment>
     <fragment
         android:id="@+id/displayimagefragment"
-        android:name="com.company.maxe.Login.index_menu.hr.ActivityImg.DisplayImageFragment.displayimagefragment"
+        android:name="com.jekma.maxe.login.hr.activityImg.displayimagefragment"
         android:label="fragment_displayimagefragment"
         tools:layout="@layout/maxe_fragment_displayimagefragment" />
     <fragment
         android:id="@+id/loginActivity"
-        android:name="com.jekma.maxe.login.MaxeFragmentLogin"
+        android:name="com.jekma.maxe.MaxeFragmentLogin"
         android:label="maxe_fragment_login"
         tools:layout="@layout/maxe_fragment_login" >
         <action
@@ -293,7 +293,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerActivity2"
-        android:name="com.jekma.maxe.login.RegisterActivity"
+        android:name="com.jekma.maxe.RegisterActivity"
         android:label="maxe_fragment_register"
         tools:layout="@layout/maxe_fragment_register" />
     <fragment

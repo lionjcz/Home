@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/maxe_wheat"
-    tools:context=".login.index_menu.documents_laws.Documents.Documents">
+    tools:context=".login.documentsLaws.documents.Documents">
 
 
     <LinearLayout

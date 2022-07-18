@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.company.maxe.Login.index_menu.sales.Button.Customer_Serching.CustomerBySerching">
+    tools:context=".login.sales.CustomerBySerching">
 
 
         <LinearLayout

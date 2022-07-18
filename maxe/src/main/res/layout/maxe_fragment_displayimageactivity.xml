@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.company.maxe.Login.index_menu.hr.ActivityImg.DisplayImageFragment.displayimageactivity">
+    tools:context=".login.hr.activityImg.displayimageactivity">
     <androidx.viewpager.widget.ViewPager
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
