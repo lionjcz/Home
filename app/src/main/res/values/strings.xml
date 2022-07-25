@@ -21,4 +21,5 @@
         <item>FutureLab</item>
     </string-array>
     <string name="title_projects_nav_container">123</string>
+    <string name="project_future_lab">FutureLab</string>
 </resources>

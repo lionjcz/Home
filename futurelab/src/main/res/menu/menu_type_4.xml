@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_setting"
+        android:title="@string/tv_menu_setting"
+        android:icon="@drawable/ic_menu_setting" />
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/tv_menu_notify"
+        android:icon="@drawable/ic_setting" />
+    <item
+        android:id="@+id/menu_privacy"
+        android:title="@string/tv_menu_about_futurelab"
+        android:icon="@drawable/ic_setting" />
+</menu>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_title_load">Load</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="_app_name">Member Demo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="member_btn_login">Login</string>
+    <string name="member_text_register">Sign up</string>
+    <string name="member_ed_hint_userid">Phone/Email</string>
+    <string name="member_ed_hint_password">Enter your password.</string>
+    <string name="member_txt_rem_login">Keep logged in</string>
+    <string name="member_txt_forget_password">Forget your password?</string>
+    <string name="member_ed_hint_phone">09xxxxxxxx</string>
+    <string name="member_ed_hint_email">aaa@example.com</string>
+    <string name="member_txt_password_again">Enter password again</string>
+    <string name="member_txt_password">Password</string>
+    <string name="text_privacy_and_terms">Privacy and Terms</string>
+    <string name="member_btn_verify">Verify</string>
+    <string name="member_txt_device_add_guide">Please press Add to add a new device.</string>
+    <string name="tv_log_out">Sign Out</string>
+    <string name="app_title_device">Future House</string>
+    <string name="tv_company_name">Future Lab.</string>
+    <string name="tv_menu_username">User name</string>
+    <string name="tv_account">account</string>
+    <string name="tv_menu_setting">Setting</string>
+    <string name="tv_menu_notify">Notify</string>
+    <string name="tv_menu_about_futurelab">About Future lab</string>
+    <string name="app_title_login">Login</string>
+    <string name="text_hint_register_password">"    密碼需要8~16字，含英數字與大小寫"</string>
+
+</resources>

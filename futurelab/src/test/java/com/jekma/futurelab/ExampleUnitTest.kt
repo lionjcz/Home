@@ -1,4 +1,4 @@
-package com.jekma.mylibrary
+package com.jekma.futurelab
 
 import org.junit.Test
 

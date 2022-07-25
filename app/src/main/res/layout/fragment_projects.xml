@@ -22,7 +22,8 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/projects_maxe"
+                android:layout_margin="10dp"
+                android:id="@+id/llMaxe"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -31,8 +32,7 @@
                 <ImageView
                     android:id="@+id/iv1234"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@drawable/progress" />
+                    android:layout_height="150dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -43,22 +43,24 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_margin="10dp"
+
+                android:id="@+id/llFutureLab"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="invisible"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@color/basePurple_700" />
+                    android:layout_height="150dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical|center_horizontal"
-                    tools:text="Maxe" />
+                    android:textColor="@color/maxe_white"
+                    android:text="@string/project_future_lab" />
             </LinearLayout>
 
             <LinearLayout

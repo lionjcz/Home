@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/default_navigation.xml"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.jekma.futurelab.LaunchFragment"
+        android:label="fragment_launch"
+        tools:layout="@layout/fragment_launch" >
+        <action
+            android:id="@+id/action_launchFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_launchFragment_to_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.jekma.futurelab.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/deviceListFragment"
+        android:name="com.jekma.futurelab.DeviceListFragment"
+        android:label="fragment_device_list"
+        tools:layout="@layout/fragment_device_list" />
+</navigation>
