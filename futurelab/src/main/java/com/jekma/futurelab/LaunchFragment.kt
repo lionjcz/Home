@@ -8,7 +8,7 @@ import androidx.annotation.RequiresApi
 import com.jekma.baselibrary.BaseFragment
 
 class LaunchFragment : BaseFragment() {
-    private val LOADING_MILLISECOND: Long = 3000
+    private val LOADING_MILLISECOND: Long = 1000
     private lateinit var mViewModel: LoginViewModel
 
     override val titleResId: Int

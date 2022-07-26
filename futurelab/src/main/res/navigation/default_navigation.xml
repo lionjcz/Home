@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/default_navigation.xml"
-    app:startDestination="@id/launchFragment">
+    app:startDestination="@id/deviceListFragment">
 
     <fragment
         android:id="@+id/launchFragment"
@@ -20,10 +20,46 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.jekma.futurelab.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/deviceListFragment"
         android:name="com.jekma.futurelab.DeviceListFragment"
         android:label="fragment_device_list"
-        tools:layout="@layout/fragment_device_list" />
+        tools:layout="@layout/fragment_device_list" >
+        <action
+            android:id="@+id/action_deviceListFragment_to_scanQrcodeFragment"
+            app:destination="@id/scanQrcodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanQrcodeFragment"
+        android:name="com.jekma.futurelab.bluetooth.ScanQrcodeFragment"
+        android:label="ScanQrcodeFragment" >
+        <action
+            android:id="@+id/action_scanQrcodeFragment_to_bluetoothInstall1Fragment"
+            app:destination="@id/bluetoothInstall1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bluetoothInstall1Fragment"
+        android:name="com.jekma.futurelab.bluetooth.BluetoothInstall1Fragment"
+        android:label="BluetoothInstall1Fragment" >
+        <action
+            android:id="@+id/action_bluetoothInstall1Fragment_to_bluetoothInstall2Fragment"
+            app:destination="@id/bluetoothInstall2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bluetoothInstall2Fragment"
+        android:name="com.jekma.futurelab.bluetooth.BluetoothInstall2Fragment"
+        android:label="BluetoothInstall2Fragment" >
+        <action
+            android:id="@+id/action_bluetoothInstall2Fragment_to_bluetoothInstall3Fragment"
+            app:destination="@id/bluetoothInstall3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bluetoothInstall3Fragment"
+        android:name="com.jekma.futurelab.bluetooth.BluetoothInstall3Fragment"
+        android:label="BluetoothInstall3Fragment" />
 </navigation>

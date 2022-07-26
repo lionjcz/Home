@@ -27,5 +27,19 @@
     <string name="tv_menu_about_futurelab">About Future lab</string>
     <string name="app_title_login">Login</string>
     <string name="text_hint_register_password">"    密碼需要8~16字，含英數字與大小寫"</string>
+    <string name="tv_connecting">Connecting</string>
+    <string name="app_title_qrcode">Scan Devices</string>
+    <string name="tv_turn_on_spotlight">Open</string>
+    <string name="tv_qrcode_scan">Scan QR Code from device to install</string>
+    <string name="btn_qrcode_open_permission">Open camera permission</string>
+    <string name="tv_detect">Auto Detect</string>
+    <string name="tv_add">Add</string>
+    <string name="tv_where_qrcode">Where are QR Code</string>
+    <string name="tv_turn_off_spotlight">Close</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="app_title"/>
+    <string name="member_alert_save_change">Do you want to save the changes?</string>
+    <string name="btn_save">Save</string>
 
 </resources>

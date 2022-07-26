@@ -28,7 +28,7 @@ class DeviceListViewModel(application: Application) : BaseViewModel(application)
         fun onGetItemDeviceIcon(type: Device.Type?): Drawable
         fun onGetItemDeviceConnectStatus(status: Device.DeviceConnectStatus?): String
         fun onGetDeviceList(deviceList: List<DeviceItemViewModel>?)
-        fun onSetSettingMenu(memberData: Member?)
+        fun onSetSettingMenu(memberData: Member)
         fun onSetAreaGroupData(areaGroupData: List<AreaGroup?>?)
         fun onLogOut()
         fun onChangeLoadingState(isLoadingShow: Boolean)

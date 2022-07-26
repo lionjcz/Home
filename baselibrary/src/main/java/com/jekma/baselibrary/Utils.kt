@@ -10,3 +10,5 @@ object Utils {
         return connectedSsid.substring(1, connectedSsid.length - 1)
     }
 }
+
+const val sTAG = "Develop_"

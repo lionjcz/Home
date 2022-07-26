@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_horizontal_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_horizontal_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_horizontal_bottom2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_horizontal_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_horizontal_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <com.jekma.futurelab.view.custom.CustomBarcodePreview
+                android:id="@+id/zxing_barcode_surface"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:zxing_framing_rect_width="250dp"
+                app:zxing_framing_rect_height="250dp"/>
+
+            <com.jekma.futurelab.view.custom.CustomViewfinderView
+                android:id="@+id/zxing_viewfinder_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:zxing_viewfinder_laser_visibility="false" />
+
+            <ImageView
+                android:id="@+id/iv_scanner_border_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_qrcode_scanner"
+                app:layout_constraintLeft_toRightOf="@id/gl_horizontal_left"
+                app:layout_constraintRight_toLeftOf="@id/gl_horizontal_right"
+                app:layout_constraintBottom_toTopOf="@id/gl_horizontal_bottom"
+                app:layout_constraintTop_toBottomOf="@id/gl_horizontal_top" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

@@ -158,7 +158,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:visibility="@{vm.obIsLoginMode ? View.VISIBLE:View.GONE}"
-                        tools:visibility="gone">
+                        tools:visibility="visible">
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/cd_id"
                             android:layout_width="match_parent"
@@ -272,7 +272,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:visibility="@{vm.obIsLoginMode ? View.GONE:View.VISIBLE}"
-                        tools:visibility="visible">
+                        tools:visibility="gone">
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:id="@+id/cv_first"
                             android:layout_width="match_parent"

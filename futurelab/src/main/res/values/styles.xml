@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/bg_1</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/bg_1</item>
+        <item name="titleTextColor">@color/text_1</item>
+        <item name="android:textColor">@color/text_1</item>
+        <item name="android:textColorHint">@color/text_2</item>
+        <!-- set menu icon color-->
+        <item name="android:textColorSecondary">@color/icon_1</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back</item>
+        <item name="actionMenuTextColor">@color/text_1</item>
+    </style>
+
+
+    <style name="AppTheme.Dialog">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowBackground">@color/mask_1</item>
+    </style>
+</resources>

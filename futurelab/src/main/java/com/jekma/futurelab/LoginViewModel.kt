@@ -118,7 +118,7 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
 //        val onCallback: MemberHttpModel.OnCallback = object : OnCallback() {
 //            fun onSuccess(member: Member) {
 //                if (mActionListener != null) {
-                    mActionListener!!.onLoginResult(Error.UNKNOWN)
+
 //                    mMemberLocalModel.saveAuthToken(member.getToken())
 //                }
 //                if (view != null) {
@@ -146,12 +146,16 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
 //            }
 //        }
         if (isTokenLogin) {
+            mActionListener!!.onLoginResult(Error.UNKNOWN)
+
 //            val localToken: String = mMemberLocalModel.getAuthToken()
 //            mApiUrl = mLoginWithTokenUrl
 //            val mMemberHttpModel = MemberHttpModel(mApiUrl)
 //            mMemberHttpModel.loginWithToken(localToken, getPhoneId(), getPhoneDesc(), getPushToken(), onCallback)
         }
         else {
+            mActionListener!!.onLoginResult(Error.OK)
+
 //            val account = obAccount.get()
 //            val password = obPassword.get()
 //            mApiUrl = mLoginApiUrl

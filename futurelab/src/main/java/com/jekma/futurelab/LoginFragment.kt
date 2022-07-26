@@ -10,7 +10,6 @@ import android.view.View.OnTouchListener
 import androidx.annotation.RequiresApi
 import com.jekma.baselibrary.BaseBindingFragment
 import com.jekma.futurelab.databinding.LoginBinding
-import java.util.regex.Pattern
 
 @RequiresApi(Build.VERSION_CODES.Q)
 class LoginFragment() : BaseBindingFragment<LoginBinding,LoginViewModel>() {
@@ -24,7 +23,11 @@ class LoginFragment() : BaseBindingFragment<LoginBinding,LoginViewModel>() {
         super.onViewCreated(view, savedInstanceState)
         mViewModel.setActionListener(object : LoginViewModel.OnActionListener{
             override fun onLoginResult(error: LoginViewModel.Error) {
+                if (error == LoginViewModel.Error.OK){
+                    gotoNextNavPage(R.id.action_loginFragment_to_deviceListFragment,null)
+                }else{
 
+                }
             }
 
             override fun onPressLogin() {
@@ -81,26 +84,3 @@ class LoginFragment() : BaseBindingFragment<LoginBinding,LoginViewModel>() {
 
 }
 
-object FormatUtil {
-    fun checkMobile(mobile: String?): Boolean {
-        val format = "09[0-9]{8}"
-        val pattern = Pattern.compile(format)
-        val matcher = pattern.matcher(mobile)
-        return matcher.matches()
-    }
-
-    fun checkEmail(email: String?): Boolean {
-        val format = "^\\w{1,63}@[a-zA-Z0-9]{2,63}\\.[a-zA-Z]{2,63}(\\.[a-zA-Z]{2,63})?$"
-        val pattern = Pattern.compile(format)
-        val matcher = pattern.matcher(email)
-        return matcher.matches()
-    }
-
-    fun checkPassword(password: String?): Boolean {
-//        String format = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$";
-        val format = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[\\s\\S]{8,16}$"
-        val pattern = Pattern.compile(format)
-        val matcher = pattern.matcher(password)
-        return matcher.matches()
-    }
-}
